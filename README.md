@@ -1,2 +1,2 @@
-# cheseakwong.github.io
+# chelseakwong.github.io
 Personal website
