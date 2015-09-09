@@ -1,3 +1,19 @@
+//modal slider
+var currentIndex;
+var items;
+var itemAmt;
+
+function cycleItems() {
+    var item = $('#testModal div').eq(currentIndex);
+    items.fadeOut(1000,function(){
+        item.fadeIn(600);
+    });
+    items.hide();
+    item.css('display','inline-block');
+}
+
+
+
 $(document).ready(function(){
     
     $('.menu-btn').click(function(){
@@ -30,30 +46,49 @@ $(document).ready(function(){
   $grid.imagesLoaded().progress( function() {
     $grid.masonry();
   });  
-	
-var library = {};
-library.a = {img:"img_ME/sampleMason/1.jpg",
-			caption: "Testing caption 1 2 3"}
+
 
 	//MODALS
 	$('.thumbnail').click(function(){
+        
+        
+        
 		$('.modal-body').empty();
 		var title = $(this).parent('a').attr("title");
 		var caption = library[title].caption;
 		$('.modal-title').html(title);
-		var newHtml = ("<a href='#' title='" + title +
-			"'>" +
-			"<img src='"+(library[title].img)+
-			"' class = 'thumbnail img-responsive'>"+
-			"</a>"+
-			"<p>"+caption+"</p>"
+		var newHtml = (
+			"<section class='slider-modal'>"+
+            "<div class='container-modal' id='testModal'>"+
+            "<div style='display: inline-block;'>"+
+			getHtmlImg(title) +
+			"</div>" + "</section>" +
+			getCaption(title)
 			);
-		console.log(newHtml);
 		$(newHtml).appendTo('.modal-body');
 
 		$('#myModal').modal({show:true});
 		$(".grid").css("position","fixed");
-	});
+		currentIndex = 0,
+		items = $('#testModal div'),
+  		itemAmt = items.length;
+    
+        var autoSlide = setInterval(function() {
+            currentIndex += 1;
+            if (currentIndex == itemAmt) {
+                currentIndex = 0;
+            }
+            cycleItems();
+        }, 4000);
+        
+    $('.container-modal').click(function() {
+        clearInterval(autoSlide);
+        currentIndex += 1;
+        if (currentIndex == itemAmt) {
+            currentIndex = 0;
+        }
+        cycleItems();
+    });
 	
 	$('.close').click(function(){
 		$(".grid").css("position","relative");
@@ -62,5 +97,8 @@ library.a = {img:"img_ME/sampleMason/1.jpg",
 	$('#close-btn-bottom').click(function(){
 		$(".grid").css("position","relative");
 	});
-	
-});
+
+        
+
+})});
+

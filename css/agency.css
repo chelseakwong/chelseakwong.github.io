@@ -73,18 +73,58 @@ body {
 .modal-body{
 	width:65%;
 /*	max-height: 400px;*/
-/*	height: 100%;*/
-	overflow: auto;
+	height: auto;
+	overflow: inherit;
 	margin: 0 auto;
-	display: block;
+	display: inline-block;
+
 }
 
 .modal-body img{
+    margin: none;
+    padding: none;
 	border: none;
 }
 
 /* end of Portfolio modal ===============================*/
 
+/* MODAL SLIDER */
+
+.slider-modal{
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container-modal {
+  background-color: rgba(255,255,255,0);
+  margin: 0 auto;
+  position: relative;
+}
+.container-modal div {
+  background-color: white;
+  width: 100%;
+  display: inline-block;
+  display: none;
+    cursor: pointer;
+  
+}
+.container-modal img {
+  width: 100%;
+  height: auto;
+}
+
+
+.next {
+  right: 5px;
+    display: inline-block;
+}
+
+.prev {
+  left: 5px;
+}
+
+
+/* END OF MODAL SLIDER*/
 
 body {
     overflow-x: hidden;
