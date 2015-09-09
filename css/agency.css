@@ -66,8 +66,13 @@ body {
 	z-index: 9998;
 }
 
-.modal-header{
+.modal-header {
 	border: none;
+}
+
+.modal-header h3{
+    margin-top: 20px;
+    font-size: 30px;
 }
 
 .modal-body{
@@ -86,6 +91,14 @@ body {
 	border: none;
 }
 
+.modal-body a{
+    font-size: 20px;
+}
+
+.modal-footer{
+    border:none;
+}
+
 /* end of Portfolio modal ===============================*/
 
 /* MODAL SLIDER */
@@ -102,16 +115,20 @@ body {
 }
 .container-modal div {
   background-color: white;
-  width: 100%;
+  width: auto;
   display: inline-block;
   display: none;
     cursor: pointer;
   
 }
 .container-modal img {
-  width: 100%;
-  height: auto;
-}
+    max-height: 600px;
+    width: auto;
+    max-width: 600px;
+    height: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto}
 
 
 .next {

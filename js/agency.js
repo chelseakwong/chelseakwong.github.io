@@ -5,14 +5,11 @@ var itemAmt;
 
 function cycleItems() {
     var item = $('#testModal div').eq(currentIndex);
-    items.fadeOut(1000,function(){
-        item.fadeIn(600);
-    });
-    items.hide();
+    items.fadeOut(500,function(){
+        item.fadeIn(500);
+    })
     item.css('display','inline-block');
 }
-
-
 
 $(document).ready(function(){
     
@@ -30,7 +27,6 @@ $(document).ready(function(){
         menubtn.style.position = 'relative';
         menubtn.style.zIndex = 1000;
         menubtn.style.position = 'fixed';
-        
         $('.container').toggle();
     })
     
@@ -79,7 +75,7 @@ $(document).ready(function(){
                 currentIndex = 0;
             }
             cycleItems();
-        }, 4000);
+        }, 7000);
         
     $('.container-modal').click(function() {
         clearInterval(autoSlide);
