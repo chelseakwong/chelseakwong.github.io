@@ -63,7 +63,8 @@ $(document).ready(function(){
 		$(newHtml).appendTo('.modal-body');
 
 		$('#myModal').modal({show:true});
-		$(".grid").css("position","fixed");
+        $(".grid").css("position","fixed");
+        
 		currentIndex = 0,
 		items = $('#testModal div'),
   		itemAmt = items.length;
@@ -77,7 +78,7 @@ $(document).ready(function(){
         }, 7500);
         
     $('.container-modal').click(function() {
-        window.clearInterval(autoSlide);
+        clearInterval(autoSlide);
         currentIndex += 1;
         if (currentIndex == itemAmt) {
             currentIndex = 0;
@@ -86,10 +87,14 @@ $(document).ready(function(){
     });
 	
 	$('.close').click(function(){
+        clearInterval(autoSlide);
+        $('.modal-dialog').scrollTop(0);
 		$(".grid").css("position","relative");
 	});
 	
 	$('#close-btn-bottom').click(function(){
+        clearInterval(autoSlide);
+        $('.modal-dialog').scrollTop(0);
 		$(".grid").css("position","relative");
 	});
 
