@@ -5,10 +5,12 @@ var itemAmt;
 
 function cycleItems() {
     var item = $('#testModal div').eq(currentIndex);
-    items.fadeOut(500,function(){
-        item.fadeIn(500);
+    items.fadeOut(500,"swing",function(){
+        window.setTimeout(function(){
+            item.fadeIn(400,"swing");
+            item.css('display','inline-block');
+        },500)
     })
-    item.css('display','inline-block');
 }
 
 $(document).ready(function(){
@@ -36,19 +38,16 @@ $(document).ready(function(){
     //percentPosition: true,
     columnWidth: 350,
     gutter: 10,
-      isFitWidth: true
+    isFitWidth: true
   });
   // layout Isotope after each image loads
   $grid.imagesLoaded().progress( function() {
-    $grid.masonry();
+    $grid.masonry('layout');
   });  
 
 
 	//MODALS
 	$('.thumbnail').click(function(){
-        
-        
-        
 		$('.modal-body').empty();
 		var title = $(this).parent('a').attr("title");
 		var caption = library[title].caption;
@@ -75,10 +74,10 @@ $(document).ready(function(){
                 currentIndex = 0;
             }
             cycleItems();
-        }, 7000);
+        }, 7500);
         
     $('.container-modal').click(function() {
-        clearInterval(autoSlide);
+        window.clearInterval(autoSlide);
         currentIndex += 1;
         if (currentIndex == itemAmt) {
             currentIndex = 0;
