@@ -17,6 +17,9 @@ $(document).ready(function(){
     
     $('.menu-btn').click(function(){
         $('nav').toggleClass('open');
+        $('body').scrollTop(0);
+        $('.container-fluid').toggle();
+        //        $('.container-fluid').css("visibility",'hidden');
         // array navs brings menu and top button forward
         var arrayNavs = document.getElementsByTagName("nav");
         var navBar = arrayNavs[0];
@@ -30,6 +33,10 @@ $(document).ready(function(){
         menubtn.style.zIndex = 1000;
         menubtn.style.position = 'fixed';
         $('.container').toggle();
+    })
+    
+    $('close-btn').click(function(){
+        $('.container-fluid').css("visibility","visible");
     })
     
     // init Masonry
@@ -49,16 +56,17 @@ $(document).ready(function(){
 	//MODALS
 	$('.thumbnail').click(function(){
 		$('.modal-body').empty();
-		var title = $(this).parent('a').attr("title");
-		var caption = library[title].caption;
+		var title = $(this).parent('a').attr("name");
+        var id = $(this).parent('a').attr('title');
+		var caption = library[id].caption;
 		$('.modal-title').html(title);
 		var newHtml = (
 			"<section class='slider-modal'>"+
             "<div class='container-modal' id='testModal'>"+
             "<div style='display: inline-block;'>"+
-			getHtmlImg(title) +
+			getHtmlImg(id) +
 			"</div>" + "</section>" +
-			getCaption(title)
+			getCaption(id)
 			);
 		$(newHtml).appendTo('.modal-body');
 
