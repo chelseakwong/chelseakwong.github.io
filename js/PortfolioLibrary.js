@@ -118,7 +118,7 @@ library.avenir = {
 library.book = {
     img:["img_ME/design/book1.jpg","img_ME/design/book2.png","img_ME/design/book3.png","img_ME/design/book4.png"],
     details:"<h4>March 2015. Class Project.</h4>",
-    caption:"<p>A visual book that documents the different types of personality disorders. The objective of this project is to summarize and incorporate all that we have learned in the class, such as hierarchy, grid system, illustration, and use of colors, to create a bound book. </p>",
+    caption:"<a href = 'img_ME/design/bookCopy.pdf'><h4>Complete book here</h4></a> <p>A visual book that documents the different types of personality disorders. The objective of this project is to summarize and incorporate all that we have learned in the class, such as hierarchy, grid system, illustration, and use of colors, to create a bound book. </p>",
     video:"",
     link:"https://chelseakwong.wordpress.com/visual-book/",
     linkDesc:'See my work progress here'  
@@ -131,6 +131,15 @@ library.rif = {
     video:"",
     link:"https://chelseakwong.wordpress.com/web-redesign-rif-pittsburgh/",
     linkDesc:'See my work progress here'  
+}
+
+library.cocktails = {
+    img:["img_ME/design/fyeahcocktails.png"],
+    details:"<h4>Sept 2015. Hackathon.</h4>",
+    caption:"<p>A simple website that displays a gallery of cocktails and how to make them. Used Yummly API for fetching cocktail ingredients. Created at Big Red Hacks. </p>",
+    video:"",
+    link:"http://fyeah.co/",
+    linkDesc:'Fyeah.co/cktails'  
 }
 
 //library.title

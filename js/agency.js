@@ -15,6 +15,15 @@ function cycleItems() {
 
 $(document).ready(function(){
     
+    //add hover states
+       $( ".grid-item" ).hover(function() {
+        $(this).find("img").addClass("hover");
+           $(this).find("h2").css("visibility","visible");
+        }, function() {
+    $(this).find("img").removeClass( "hover" );
+        $(this).find("h2").css("visibility","hidden");
+  });
+    
     $('.menu-btn').click(function(){
         $('nav').toggleClass('open');
         $('body').scrollTop(0);

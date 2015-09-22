@@ -1,3 +1,51 @@
+.containerheader{
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+#subtitleAbout{
+    color: #fd5f65;
+}
+
+#about p{
+    font-size: 18px;
+}
+
+#about{
+    margin-left: 1%;
+    width:60%;
+}
+/*hover*/
+.hover{
+    opacity: 0.5;
+  }
+#navlogo{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 15%;
+    height: auto;
+}
+
+#more{
+    font-size: 20px;
+    letter-spacing: 8px;
+    color: lightgrey;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.grid-item h2{
+    top: 30%;
+    left: 0;
+    position:absolute;
+    text-align:center;
+    width: 100%;
+    background-color:rgba(255,255,255,0.7);
+    visibility: hidden;
+    font-size: 16px;
+    letter-spacing: 6px;
+}
+
 /* force scrollbar */
 html { overflow-y: scroll; }
 
@@ -194,6 +242,8 @@ a.active {
     color: #a99da1;
 }
 
+
+
 h1,
 h2,
 h3,
@@ -204,6 +254,7 @@ h6 {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
+
 
 .img-centered {
     margin: 0 auto;
