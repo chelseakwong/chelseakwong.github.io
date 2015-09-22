@@ -48,8 +48,6 @@ $(document).ready(function(){
         $('.container-fluid').css("visibility","visible");
     })
     
-     
-    
     // init Masonry
   var $grid = $('.grid').masonry({
     itemSelector: '.grid-item',
@@ -67,17 +65,14 @@ $(document).ready(function(){
 	//MODALS
 	$('.thumbnail').click(function(){
 		$('.modal-body').empty();
-        
-        $('.modal-body').css('min-height', $(window).height());
-		
-        var title = $(this).parent('a').attr("name");
+		var title = $(this).parent('a').attr("name");
         var id = $(this).parent('a').attr('title');
 		var caption = library[id].caption;
 		$('.modal-title').html(title);
 		var newHtml = (
 			"<section class='slider-modal'>"+
             "<div class='container-modal' id='testModal'>"+
-            "<div class ='modal-img' style='display: inline-block;'>"+
+            "<div style='display: inline-block;'>"+
 			getHtmlImg(id) +
 			"</div>" + "</section>" +
 			getCaption(id)
@@ -100,12 +95,12 @@ $(document).ready(function(){
         }, 7500);
         
     $('.container-modal').click(function() {
-            clearInterval(autoSlide);
-            currentIndex += 1;
-            if (currentIndex == itemAmt) {
-                currentIndex = 0;
-            }
-            cycleItems();
+        clearInterval(autoSlide);
+        currentIndex += 1;
+        if (currentIndex == itemAmt) {
+            currentIndex = 0;
+        }
+        cycleItems();
     });
 	
 	$('.close').click(function(){

@@ -17,7 +17,7 @@
 }
 /*hover*/
 .hover{
-    opacity: 0.2;
+    opacity: 0.5;
   }
 #navlogo{
     padding-top: 30px;
@@ -40,9 +40,10 @@
     position:absolute;
     text-align:center;
     width: 100%;
+    background-color:rgba(255,255,255,0.7);
     visibility: hidden;
-    font-size: 14px;
-    letter-spacing: 2px;
+    font-size: 16px;
+    letter-spacing: 6px;
 }
 
 /* force scrollbar */
@@ -95,18 +96,23 @@ body {
 
 /* Portfolio modal ===============================*/
 .modal-dialog {
-    width:auto;
 	margin: 0;
-/*	width: 100%;*/
-    border: 0
+	width: 100%;
+	height: 100%;
+/*	padding: 100px 0;*/
+/*    min-height: 100%;*/
+    border: 0;
     border-radius: 0;
     text-align: center;
     background-clip: content-box;
     -webkit-box-shadow: none;
     box-shadow: none;
-	overflow-y: scroll;
+	overflow-y: auto;
+/*	position: fixed;*/
+	display: block;
 	z-index: 9998;
 }
+
 .modal-header {
 	border: none;
 }
@@ -118,8 +124,9 @@ body {
 
 .modal-body{
 	width:65%;
+/*	max-height: 400px;*/
 	height: auto;
-	overflow-y: scroll;
+	overflow: inherit;
 	margin: 0 auto;
 	display: inline-block;
 
@@ -157,7 +164,8 @@ body {
   background-color: white;
   width: auto;
   display: inline-block;
-cursor: pointer;
+  display: none;
+    cursor: pointer;
   
 }
 .container-modal img {
@@ -167,6 +175,17 @@ cursor: pointer;
     position: relative;
     margin-left: auto;
     margin-right: auto}
+
+
+.next {
+  right: 5px;
+    display: inline-block;
+}
+
+.prev {
+  left: 5px;
+}
+
 
 /* END OF MODAL SLIDER*/
 
