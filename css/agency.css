@@ -1,6 +1,19 @@
 .containerheader{
     padding-top: 50px;
     padding-bottom: 70px;
+    padding-left: 20px;
+}
+
+.container-about{
+    padding-left: 20px;
+}
+
+.copyright{
+    font-family: "Roboto Slab";
+    padding-left: 40px;
+    font-size: 12px;
+    padding-bottom: 30px;
+    color: darkgrey;
 }
 
 #subtitleAbout{
@@ -9,15 +22,18 @@
 
 #about p{
     font-size: 18px;
+    padding-bottom: 200px;
 }
 
 #about{
-    margin-left: 1%;
+    padding-left: 40px;
     width:60%;
 }
+
+
 /*hover*/
 .hover{
-    opacity: 0.5;
+    opacity: 0.2;
   }
 #navlogo{
     padding-top: 30px;
@@ -32,6 +48,7 @@
     color: lightgrey;
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-left: 20px;
 }
 
 .grid-item h2{
@@ -40,7 +57,7 @@
     position:absolute;
     text-align:center;
     width: 100%;
-    background-color:rgba(255,255,255,0.7);
+/*    background-color:rgba(255,255,255,0.7);*/
     visibility: hidden;
     font-size: 16px;
     letter-spacing: 6px;
@@ -54,6 +71,10 @@ body {
 }
 
 #lcol {float: left;}
+
+.row{
+    padding-left: 20px;
+}
 
 /* MASONRY GRID ===============================*/
 * {
