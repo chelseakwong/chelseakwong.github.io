@@ -68,7 +68,7 @@ nav a:hover{
 }
 .menu-btn{
     cursor: pointer;
-    background-image: url('img_ME/menubtn.png');
+    background-image: url('../img_ME/menubtn.png');
     height: 60px;
     width: 60px;
     background-size: cover;
@@ -81,7 +81,7 @@ nav a:hover{
     margin:10px;
 }
 .close-btn{
-    background-image: url('img_ME/cross.png');
+    background-image: url('../img_ME/cross.png');
 }
 
 /* FILTER MENU HERE*/
