@@ -68,19 +68,20 @@ nav a:hover{
 }
 .menu-btn{
     cursor: pointer;
-    background-image: url('http://thecodeblock.com/wp-content/uploads/btn-hamburger.png');
+    background-image: url('img_ME/menubtn.png');
     height: 60px;
     width: 60px;
     background-size: cover;
-    background-color: #000;
+/*    background-color: #000;*/
     display: inline;
     z-index: 99;
     position: fixed;
     top: 0;
     right: 0;
+    margin:10px;
 }
 .close-btn{
-    background-image: url('http://thecodeblock.com/wp-content/uploads/btn-close.png');
+    background-image: url('img_ME/cross.png');
 }
 
 /* FILTER MENU HERE*/

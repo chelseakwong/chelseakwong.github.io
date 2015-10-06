@@ -15,7 +15,7 @@ function cycleItems() {
 
 $(document).ready(function(){
     
-    //add hover states
+    //add hover states for grid items
        $( ".grid-item" ).hover(function() {
         $(this).find("img").addClass("hover");
            $(this).find("h2").css("visibility","visible");
