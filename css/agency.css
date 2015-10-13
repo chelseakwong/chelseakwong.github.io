@@ -15,7 +15,8 @@
 
 .cbp-af-header .cbp-af-inner {
 	width: 90%;
-	max-width: 69em;
+/*	max-width: 69em;*/
+    height: auto;
 	margin-left: 40px;
 	padding: 0;
 }
@@ -80,13 +81,13 @@
 	.cbp-af-header nav {
 		display: block;
 		margin: 0 auto;
-		text-align: center;
+		text-align: left;
 		float: none;
 	}
 
 	.cbp-af-header h1,
 	.cbp-af-header nav a {
-		line-height: 15px;
+		line-height: 90px;
 	}
 
 	.cbp-af-header nav a {
