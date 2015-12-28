@@ -8,7 +8,7 @@ function cycleItems() {
     items.fadeOut(500,"swing",function(){
         window.setTimeout(function(){
             item.fadeIn(400,"swing");
-            item.css('display','inline-block');
+//            item.css('display','inline-block');
         },500)
     })
 }
@@ -70,12 +70,13 @@ $(document).ready(function(){
 		var caption = library[id].caption;
 		$('.modal-title').html(title);
 		var newHtml = (
-			"<section class='slider-modal'>"+
+            "<div class='wrap-modal'>" +
             "<div class='container-modal' id='testModal'>"+
-            "<div style='display: inline-block;'>"+
+            "<div class='img-modal' style='display: inline-block;'>"+
 			getHtmlImg(id) +
-			"</div>" + "</section>" +
-			getCaption(id)
+			"</div>" +
+            "<div class='caption-modal'>" +
+			getCaption(id) + "</div>" + "</div>" + "</div>"
 			);
 		$(newHtml).appendTo('.modal-body');
 
