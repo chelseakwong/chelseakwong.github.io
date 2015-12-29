@@ -17,11 +17,11 @@ $(document).ready(function(){
     
     //add hover states for grid items
        $( ".grid-item" ).hover(function() {
-        $(this).find("img").addClass("hover");
-           $(this).find("h2").css("visibility","visible");
+            $(this).find("img").addClass("hover");
+            $(this).find("h2").css("visibility","visible");
         }, function() {
-    $(this).find("img").removeClass( "hover" );
-        $(this).find("h2").css("visibility","hidden");
+           $(this).find("img").removeClass( "hover" );
+           $(this).find("h2").css("visibility","hidden");
   });
     
     $('.menu-btn').click(function(){
@@ -44,9 +44,9 @@ $(document).ready(function(){
         $('.container').toggle();
     })
     
-    $('close-btn').click(function(){
-        $('.container-fluid').css("visibility","visible");
-    })
+//    $('close-btn').click(function(){
+//        $('.container-fluid').css("visibility","visible");
+//    })
     
     // init Masonry
   var $grid = $('.grid').masonry({
@@ -56,6 +56,7 @@ $(document).ready(function(){
     gutter: 10,
     isFitWidth: true
   });
+    
   // layout Isotope after each image loads
   $grid.imagesLoaded().progress( function() {
     $grid.masonry('layout');
@@ -65,6 +66,8 @@ $(document).ready(function(){
 	//MODALS
 	$('.thumbnail').click(function(){
 		$('.modal-body').empty();
+        $("body").addClass("modal-open"); //hide bkgd scroll
+        
 		var title = $(this).parent('a').attr("name");
         var id = $(this).parent('a').attr('title');
 		var caption = library[id].caption;
@@ -81,41 +84,38 @@ $(document).ready(function(){
 		$(newHtml).appendTo('.modal-body');
 
 		$('#myModal').modal({show:true});
-        $(".grid").css("position","fixed");
-        
-		currentIndex = 0,
+//        $(".grid").css("position","fixed");
+		
+        currentIndex = 0,
 		items = $('#testModal div'),
   		itemAmt = items.length;
     
         var autoSlide = setInterval(function() {
+            if (itemAmt > 1){
+                currentIndex += 1;
+                if (currentIndex == itemAmt) {
+                    currentIndex = 0;
+                }
+                cycleItems();
+            }
+        }, 7500);
+        
+    $('.container-modal').click(function() {
+        clearInterval(autoSlide);
+        if (itemAmt > 1){
             currentIndex += 1;
             if (currentIndex == itemAmt) {
                 currentIndex = 0;
             }
             cycleItems();
-        }, 7500);
-        
-    $('.container-modal').click(function() {
-        clearInterval(autoSlide);
-        currentIndex += 1;
-        if (currentIndex == itemAmt) {
-            currentIndex = 0;
         }
-        cycleItems();
     });
 	
 	$('.close').click(function(){
         clearInterval(autoSlide);
-        $('.modal-dialog').scrollTop(0);
+//        $('.modal-dialog').scrollTop(0);
 		$(".grid").css("position","relative");
 	});
-	
-	$('#close-btn-bottom').click(function(){
-        clearInterval(autoSlide);
-        $('.modal-dialog').scrollTop(0);
-		$(".grid").css("position","relative");
-	});
-
         
 
 })});

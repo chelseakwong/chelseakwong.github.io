@@ -315,6 +315,7 @@ display: block;
 /*    border: 1px solid red;*/
     vertical-align: middle;
     padding-right: 20px;
+    cursor: pointer;
 }
 
 .caption-modal{
