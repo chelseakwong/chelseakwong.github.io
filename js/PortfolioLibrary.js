@@ -6,6 +6,14 @@
 */
 var library = {};
 
+library.GrumbleBee = {img:["img_ME/grumblebee/main.png"],
+                      details:"<h4>Nov. 2015. Group Project.</h4>",
+                      video:"",
+                      caption:"<p>Grumble Bee is a web application created to address issues that CMU students face with the general administration / way things are run on campus. It allows students to anonymously post and share their concerns, and view others' as well.</p>",
+                      link:"http://grumble-bee.herokuapp.com/",
+                      linkDesc:"Grumble Bee is live!"
+}
+
 library.Prepper = {img:["img_ME/Prepper/main_screen.jpg",
                        "img_ME/Prepper/main_all.jpg",
                        "img_ME/Prepper/grocery.jpg",
