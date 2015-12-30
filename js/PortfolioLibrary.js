@@ -1,3 +1,9 @@
+/*
+
+    All portfolio items listed below with respective positions 
+    in folders
+
+*/
 var library = {};
 
 library.Prepper = {img:["img_ME/Prepper/main_screen.jpg",

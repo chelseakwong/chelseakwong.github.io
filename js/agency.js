@@ -16,13 +16,11 @@ function cycleItems() {
 $(document).ready(function(){
     
     //add hover states for grid items
-       $( ".grid-item" ).hover(function() {
-            $(this).find("img").addClass("hover");
-            $(this).find("h2").css("visibility","visible");
-        }, function() {
-           $(this).find("img").removeClass( "hover" );
-           $(this).find("h2").css("visibility","hidden");
-  });
+    $( ".grid-item" ).hover(function() {
+        $(this).find("img").addClass("hover");
+    }, function() {
+       $(this).find("img").removeClass( "hover" );
+    });
     
     $('.menu-btn').click(function(){
         $('nav').toggleClass('open');
@@ -49,25 +47,23 @@ $(document).ready(function(){
 //    })
     
     // init Masonry
-  var $grid = $('.grid').masonry({
-    itemSelector: '.grid-item',
-    //percentPosition: true,
-    columnWidth: 350,
-    gutter: 10,
-    isFitWidth: true
-  });
+    var $grid = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        //percentPosition: true,
+        columnWidth: 350,
+        gutter: 10,
+        isFitWidth: true
+    });
     
   // layout Isotope after each image loads
-  $grid.imagesLoaded().progress( function() {
-    $grid.masonry('layout');
-  });  
+    $grid.imagesLoaded().progress( function() {
+        $grid.masonry('layout');
+    });  
 
 
 	//MODALS
 	$('.thumbnail').click(function(){
-		$('.modal-body').empty();
-        $("body").addClass("modal-open"); //hide bkgd scroll
-        
+		$('.modal-body').empty();        
 		var title = $(this).parent('a').attr("name");
         var id = $(this).parent('a').attr('title');
 		var caption = library[id].caption;
@@ -76,15 +72,19 @@ $(document).ready(function(){
             "<div class='wrap-modal'>" +
             "<div class='container-modal' id='testModal'>"+
             "<div class='img-modal' style='display: inline-block;'>"+
-			getHtmlImg(id) +
-			"</div>" +
+			getHtmlImg(id) + 
+            "<h2 id='modal-prev'> Prev </h2>" +
+			"<h2 id='modal-next'> Next </h2>" +
+            "</div>" +
             "<div class='caption-modal'>" +
 			getCaption(id) + "</div>" + "</div>" + "</div>"
 			);
 		$(newHtml).appendTo('.modal-body');
 
 		$('#myModal').modal({show:true});
-//        $(".grid").css("position","fixed");
+        
+        //prevent scrolling of body when in modal
+        $(".grid").css("position","fixed");
 		
         currentIndex = 0,
 		items = $('#testModal div'),
@@ -100,12 +100,47 @@ $(document).ready(function(){
             }
         }, 7500);
         
-    $('.container-modal').click(function() {
+     $( ".grid-item" ).hover(function() {
+        $(this).find("img").addClass("hover");
+    }, function() {
+       $(this).find("img").removeClass( "hover" );
+    });
+        
+    //add hover states in lightbox
+    if (itemAmt > 1){
+            $('.container-modal').hover(function(){
+            $(this).find("h2").css("visibility", "visible");
+        }, function(){
+            $(this).find("h2").css("visibility", "hidden");
+        });
+
+        $('.container-modal h2').hover(function(){
+            $(this).css("background-color", "rgba(0,0,0,0.5)");
+        }, function(){
+            $(this).css("background-color", "rgba(0,0,0,0.3)");
+        });
+    }
+        
+    //next and prev buttons on slider
+    $('#modal-next').click(function() {
         clearInterval(autoSlide);
         if (itemAmt > 1){
             currentIndex += 1;
+            //at max, restart
             if (currentIndex == itemAmt) {
                 currentIndex = 0;
+            }
+            cycleItems();
+        }
+    });
+        
+    $('#modal-prev').click(function() {
+        clearInterval(autoSlide);
+        if (itemAmt > 1){
+            currentIndex -= 1;
+            //at min, restart
+            if ((currentIndex<0)) {
+                currentIndex = itemAmt-1;
             }
             cycleItems();
         }
