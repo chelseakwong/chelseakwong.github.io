@@ -23,7 +23,7 @@ $(document).ready(function(){
        $(this).find("img").removeClass( "hover" );
     });
     
-    $('.menu-btn').click(function(){
+    $('.title-sub').click(function(){
         $('nav').toggleClass('open');
         $('body').scrollTop(0);
         $('.container-fluid').toggle();
@@ -34,18 +34,31 @@ $(document).ready(function(){
         navBar.style.position = 'relative';
         navBar.style.zIndex = 999;
         navBar.style.position = 'absolute';
-        $(this).toggleClass('close-btn');
         var menuButton = document.getElementsByClassName("menu-btn");
         var menubtn = menuButton[0];
         menubtn.style.position = 'relative';
         menubtn.style.zIndex = 1000;
         menubtn.style.position = 'fixed';
+        $(".menu-btn").css("visibility","visible")
+        $(".menu-btn").toggleClass('close-btn');
         $('.container').toggle();
+        
+        //fix scroll
+        tempScrollTop = $(document.body).scrollTop();
+        $(".grid").css("position","fixed");
     })
     
-//    $('close-btn').click(function(){
-//        $('.container-fluid').css("visibility","visible");
-//    })
+    $('.menu-btn').click(function(){
+        $(this).toggleClass('close-btn');
+        $(this).css("visibility","hidden");
+        $('nav').toggleClass('open');
+        $('.container-fluid').toggle();
+        $('.container').toggle();
+        
+        //resume scroll
+        $(".grid").css("position","relative");
+        $(window).scrollTop(tempScrollTop);
+    })
     
     // init Masonry
     var $grid = $('.grid').masonry({

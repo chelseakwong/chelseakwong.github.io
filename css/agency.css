@@ -26,7 +26,7 @@
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
 .cbp-af-header h1{
     display: inline-block;
-	line-height: 90px;
+	line-height: 120px;
 }
 
 .cbp-af-header h1 {
@@ -34,9 +34,13 @@
     display: inline-block;
 	color: #333;
 /*	letter-spacing: 4px;*/
-	font-size: 1.5em;
+	font-size: 2em;
 	margin: 0;
 	float:none;
+}
+
+.menu-btn{
+    visibility: hidden;
 }
 
 .cbp-af-header nav {
@@ -134,7 +138,7 @@
 }
 
 #subtitleAbout{
-    color: #fd5f65;
+    color: black;
 }
 
 #about p{
@@ -143,6 +147,7 @@
 }
 
 #about{
+    padding-top: 150px;
     padding-left: 40px;
     width:60%;
 }
@@ -205,8 +210,12 @@ body {
 .grid {
     padding-top: 150px;
     background: #FFF;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 0;
+/*    margin-left: 10%;*/
+/*    margin-right: 10%;*/
+    padding-left: 5%;
+    padding-right: 5%;
     float: none;
 }
 
@@ -834,16 +843,31 @@ body {
 /* TITLE LAYOUT************************* */
 
 .title{
-    font-size: 1.5em;
+    font-size: 30px;
 	letter-spacing: 5px;
 	display:inline-block;
-    	margin-top: 30px;
-
-/*    padding-left: 50px;*/
+    margin-top: 30px;
 }
 
 #subtitle{
-	color: #e88873;
+	color: black;
+}
+
+#slash{
+    padding-left: 13px;
+    padding-right: 13px;
+    font-size: 15px;
+}
+
+.title-sub{
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.title-sub:hover{
+   letter-spacing: 5px; 
+    opacity: .2;
 }
 
 .containerheader{
