@@ -313,23 +313,18 @@ display: block;
     cursor: pointer;
 }
 
-
 .container-modal h2{
     background-color: rgba(0,0,0,0.3);
     color: white;
     position: absolute; 
     display: inline-block;
     top: 0; 
+    font-size: 14px;
     margin-top: 0;
-    padding-top: 40%;
+    padding-top: 50%;
     width: 50%; 
     height: 100%;
     visibility: hidden;
-     -webkit-transition: background-color .3s ease-in;
-    -moz-transition: background-color .3s ease-in;
-    -o-transition: background-color .3s ease-in;
-    -ms-transition: background-color .3s ease-in;
-    transition: background-color .3s ease-in;
 }
 
 #modal-prev{

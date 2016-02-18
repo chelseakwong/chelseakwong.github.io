@@ -2,6 +2,7 @@
 var currentIndex;
 var items;
 var itemAmt;
+var tempScrollTop = $(document.body).scrollTop();
 
 function cycleItems() {
     var item = $('#testModal div').eq(currentIndex);
@@ -84,8 +85,10 @@ $(document).ready(function(){
 		$('#myModal').modal({show:true});
         
         //prevent scrolling of body when in modal
+        //remember previous scroll position so can reset after we close modal
+        tempScrollTop = $(document.body).scrollTop();
         $(".grid").css("position","fixed");
-		
+        
         currentIndex = 0,
 		items = $('#testModal div'),
   		itemAmt = items.length;
@@ -149,7 +152,8 @@ $(document).ready(function(){
 	$('.close').click(function(){
         clearInterval(autoSlide);
 //        $('.modal-dialog').scrollTop(0);
-		$(".grid").css("position","relative");
+        $(".grid").css("position","relative");
+        $(window).scrollTop(tempScrollTop);
 	});
         
 
