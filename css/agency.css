@@ -6,21 +6,21 @@
 	width: 100%;
 	background: white;
 	z-index: 80;
-	height: 30%;
+	height: 10%;
 	overflow: visible;
     float: none;
     margin: 0 auto;
+    padding-bottom: 20px;
 	-webkit-transition: height 0.3s;
 	-moz-transition: height 0.3s;
 	transition: height 0.3s;
 }
 
 .cbp-af-header .cbp-af-inner {
-/*	width: 90%;*/
     height: auto;
     margin: 0 auto;
     padding-left: 50px;
-/*	margin-bottom: 50px;*/
+	padding-bottom: 50px;
 }
 
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
@@ -195,7 +195,7 @@ body {
   font-family: sans-serif;
 }
 
-#lcol {float: none;}
+/*#lcol {float: none;}*/
 
 
 
@@ -209,8 +209,11 @@ body {
 
 /* ---- isotope ---- */
 
+.navbar{
+    height:190px;
+}
+
 .grid {
-    padding-top: 20%;
     background: #FFF;
 /*    max-width: 1000px;*/
     margin: 0 0;
@@ -218,6 +221,7 @@ body {
 /*    margin-right: 10%;*/
     padding-left: 5%;
     padding-right: 5%;
+    padding-top:10%;
     float: none;
 }
 
