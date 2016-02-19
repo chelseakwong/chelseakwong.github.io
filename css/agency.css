@@ -26,7 +26,8 @@
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
 .cbp-af-header h1{
     display: inline-block;
-	line-height: 120px;
+/*	line-height: 60px;*/
+    padding-top: 3px;
 }
 
 .cbp-af-header h1 {
@@ -35,7 +36,7 @@
 	color: #333;
 /*	letter-spacing: 4px;*/
 	font-size: 2em;
-	margin: 0;
+/*	margin: 0;*/
 	float:none;
 }
 
@@ -65,7 +66,7 @@
 
 .cbp-af-header.cbp-af-header-shrink h1,
 .cbp-af-header.cbp-af-header-shrink nav a {
-	line-height: 90px;
+	line-height: 20px;
 }
 
 .cbp-af-header.cbp-af-header-shrink h1 {
@@ -859,9 +860,10 @@ body {
     font-size: 15px;
 }
 
-.title-sub{
-    color: black;
-    text-decoration: underline;
+h1.title-sub{
+    background-color: black;
+    color: white;
+/*    text-decoration: underline;*/
     cursor: pointer;
 }
 
