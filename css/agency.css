@@ -80,7 +80,10 @@
 		width: 100%;
 	}
 
-	.cbp-af-header h1,
+    .cbp-af-header h1{
+        font-size: 3vw;
+    }
+    
 	.cbp-af-header nav {
 		display: block;
 		margin: 0 auto;
@@ -88,7 +91,6 @@
 		float: none;
 	}
 
-	.cbp-af-header h1,
 	.cbp-af-header nav a {
 		line-height: 90px;
 	}
@@ -103,7 +105,8 @@
 	}
 
 	.cbp-af-header.cbp-af-header-shrink h1 {
-		font-size: 15px;
+/*		font-size: 15px;*/
+        font-size: 3vw;
 	}
 
 	.cbp-af-header.cbp-af-header-shrink nav a {
