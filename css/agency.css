@@ -6,7 +6,7 @@
 	width: 100%;
 	background: white;
 	z-index: 80;
-	height: 100px;
+	height: 20%;
 	overflow: visible;
     float: none;
     margin: 0 auto;
@@ -24,24 +24,21 @@
 }
 
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
-.cbp-af-header h1{
-    display: inline-block;
-/*	line-height: 60px;*/
-    padding-top: 3px;
-}
 
 .cbp-af-header h1 {
 	text-transform: uppercase;
     display: inline-block;
 	color: #333;
 /*	letter-spacing: 4px;*/
-	font-size: 2em;
-/*	margin: 0;*/
+/*	font-size: 2em;*/
+/*    padding-top: 1vw;*/
+    font-size: 4.5vw;
+/*	margin: 0 auto;*/
 	float:none;
 }
 
 .menu-btn{
-    visibility: hidden;
+    visibility: visible;
 }
 
 .cbp-af-header nav {
@@ -212,7 +209,7 @@ body {
 /* ---- isotope ---- */
 
 .grid {
-    padding-top: 50px;
+    padding-top: 100px;
     background: #FFF;
     max-width: 1000px;
     margin: 0 0;

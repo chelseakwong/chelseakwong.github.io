@@ -50,7 +50,7 @@ $(document).ready(function(){
     
     $('.menu-btn').click(function(){
         $(this).toggleClass('close-btn');
-        $(this).css("visibility","hidden");
+//        $(this).css("visibility","hidden");
         $('nav').toggleClass('open');
         $('.container-fluid').toggle();
         $('.container').toggle();
