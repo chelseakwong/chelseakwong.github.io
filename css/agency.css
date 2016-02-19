@@ -6,7 +6,7 @@
 	width: 100%;
 	background: white;
 	z-index: 80;
-	height: 20%;
+	height: 30%;
 	overflow: visible;
     float: none;
     margin: 0 auto;
@@ -29,10 +29,11 @@
 	text-transform: uppercase;
     display: inline-block;
 	color: #333;
-/*	letter-spacing: 4px;*/
+	letter-spacing: 4px;
 /*	font-size: 2em;*/
 /*    padding-top: 1vw;*/
-    font-size: 4.5vw;
+    line-height: 190px;
+    font-size: 3vw;
 /*	margin: 0 auto;*/
 	float:none;
 }
@@ -209,9 +210,9 @@ body {
 /* ---- isotope ---- */
 
 .grid {
-    padding-top: 100px;
+    padding-top: 20%;
     background: #FFF;
-    max-width: 1000px;
+/*    max-width: 1000px;*/
     margin: 0 0;
 /*    margin-left: 10%;*/
 /*    margin-right: 10%;*/
@@ -237,7 +238,7 @@ body {
 }
 
 .grid-item img {
-display: block;
+    display: block;
     max-width: 100%;
     border-style: none;
 }

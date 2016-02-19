@@ -65,7 +65,7 @@ $(document).ready(function(){
         itemSelector: '.grid-item',
         //percentPosition: true,
         columnWidth: 350,
-        gutter: 10,
+        gutter: 20,
         isFitWidth: true
     });
     
