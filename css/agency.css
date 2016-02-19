@@ -148,9 +148,9 @@
 }
 
 #about{
-    padding-top: 150px;
+    padding-top: 100px;
     padding-left: 40px;
-    width:60%;
+    width:70%;
 }
 
 
@@ -209,7 +209,7 @@ body {
 /* ---- isotope ---- */
 
 .grid {
-    padding-top: 150px;
+    padding-top: 50px;
     background: #FFF;
     max-width: 1000px;
     margin: 0 0;
@@ -331,7 +331,7 @@ display: block;
     top: 0; 
     font-size: 14px;
     margin-top: 0;
-    padding-top: 50%;
+    padding-top: 40%;
     width: 50%; 
     height: 100%;
     visibility: hidden;
