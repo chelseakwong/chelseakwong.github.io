@@ -217,11 +217,11 @@ body {
 .grid {
     background: #FFF;
 /*    max-width: 1000px;*/
-    margin: 0 0;
+    margin: 0 auto;
 /*    margin-left: 10%;*/
 /*    margin-right: 10%;*/
-    padding-left: 5%;
-    padding-right: 5%;
+/*    padding-left: 5%;*/
+/*    padding-right: 5%;*/
 /*    padding-top:35%;*/
     float: none;
 }
@@ -236,9 +236,9 @@ body {
 /* ---- .grid-item ---- */
 
 .grid-item {
-    width: 300px;
+    width: 260px;
     float:center;
-    margin: 10px;
+    margin: 16px;
 /*    margin-bottom: 10px;*/
 }
 
