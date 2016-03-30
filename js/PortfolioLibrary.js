@@ -6,12 +6,29 @@
 */
 var library = {};
 
+library.AudioLight = {img:["img_ME/audioLight.png"],
+                      details:"Jan. 2016. Individual Project.",
+                      video:"<iframe src='https://player.vimeo.com/video/153323520' width='300' height='281' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+                      caption:"This is an Audio Visualizer built for the class Interactive Arts and Computational Design. The color dots on the wheel enlarge and blur when there is a sudden loudness in the audio. I designed the color light wheel such that the dots are all primary CYMK colors, and so when the circles overlap each other they create new colors based on which other ones they are overlapping with. I thought it would be interesting to look at.",
+                      link:"https://github.com/chelseakwong/Audio-Visualizer",
+                      linkDesc:"Github"
+}
+
+library.GenerativePolygonArt = {img:["img_ME/genArt/1.png","img_ME/genArt/2.png","img_ME/genArt/3.png","img_ME/genArt/4.png","img_ME/genArt/5.png"],
+                      details:"<h4>Jan. 2016. Individual Project.</h4>",
+                      video:"",
+                      caption:"I made a polygon art generator bot that posts every hour. I wanted to create a generative art bot because I have always been fascinated by generative art. This bot autogenerates an image every hour with a program I wrote with Java Processing and Node.js, and it is hosted on an Ubuntu server provided by Digital Ocean. I was very pleased with the final result of my bot, and sometimes I was surprised by the level of complexity of the images. For example, the shading effect caused by a X or Y rotation gave the polygons some beams of light, and overlapped with others gave a nice multi-dimensional effect. ",
+                      link:"https://twitter.com/polyartbot",
+                      linkDesc:"Twitter Bot"
+}
+
+
 library.GrumbleBee = {img:["img_ME/grumblebee/main.png"],
                       details:"<h4>Nov. 2015. Group Project.</h4>",
                       video:"",
                       caption:"<p>Grumble Bee is a web application created to address issues that CMU students face with the general administration / way things are run on campus. It allows students to anonymously post and share their concerns, and view others' as well.</p>",
                       link:"http://grumble-bee.herokuapp.com/",
-                      linkDesc:"Grumble Bee is live!"
+                      linkDesc:"Grumble Bee"
 }
 
 library.Prepper = {img:["img_ME/Prepper/main_screen.jpg",
@@ -35,7 +52,7 @@ library.FoodySlap = {img:["img_ME/FoodySlap/open.png",
                      video:"",
                      caption:"Tinder for restaurants, a webapp that allows users to browse through nearby restaurants on 'cards.' If connected to Leap Motion the webapp could interact with the user's hand gestures to move cards. Used Yelp API to acquire information about restaurants. Worked with a team of 4 at Hack the North.</p>",
                      link: "https://github.com/chelseakwong/FoodySlap",
-                     linkDesc: "See it on my GitHub"
+                     linkDesc: "GitHub"
 }
 
 library.Iris = {
@@ -53,7 +70,7 @@ library.LedLamp = {
     details:"<h4>July 2014. Personal Project.</h4>",
     caption:"<p>A summer project done in my free time. Programmed with a micro-controller, and constructed a circuit to create an interactive lamp that changes colors and patterns when someone touches it. Self-taught Arduino and USBASP programming to address LED strings in order to create different effects.</p>",
     link:" ",
-    video:'<iframe src="https://player.vimeo.com/video/99864380" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+    video:'<iframe src="https://player.vimeo.com/video/99864380" width="200" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
     linkDesc:""
 }
 
@@ -63,7 +80,7 @@ library.TowerDefense = {
     caption:"<p>Made for the intro computer science class, 15-112, at Carnegie Mellon University. A tower defense game implemented with PyGame in Python.</p>",
     link:"https://github.com/chelseakwong/Chelsea-s-Minimal-Tower-Defense",
     video:'<iframe src="https://player.vimeo.com/video/113585265" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
-    linkDesc: "See it on my GitHub"
+    linkDesc: "GitHub"
 }
 
 library.KPL = {
@@ -117,7 +134,7 @@ library.gestalt = {
     caption:"<p>A poster of gestalt compositions that represents different words. This is an introductory project done in the class Communication Design Fundamentals, exploring form and composition and learning about gestalt principles.  The project aims to portray words with only black squares. The words portrayed are, in order, 'order,' 'tension,' 'congestion,' 'playfulness,' and 'comfort.'</p> <p>This project’s purpose is to provide students an opportunity to understand gestalt principles and utilize them in design, which is to convey meaning through whole compositions, to read beyond their individual parts. </p><p>Some constraints on our creations are that the squares must be filled in with black, they cannot overlap, and the image cannot be a literal interpretation of the word.</p>",
     video:"",
     link:"https://chelseakwong.wordpress.com/gestalt-composition/",
-    linkDesc:'See my work progress here'  
+    linkDesc:'Work Process'  
 }
 
 library.avenir = {
@@ -126,7 +143,7 @@ library.avenir = {
     caption:"<p>A typography specimen poster for Avenir. This project was done in Communications Design Fundamentals class as an introduction to typography. The goal of the project was to leads us to appreciate the uniqueness of each typeface: how it is designed, its history, the details of each character in the typeface, the delicacy and effort put into designing each and every font.</p> <p>To do so, we are to create a type specimen poster that showcases our assigned font in a way we deem suitable and fitting. The typeface is chosen from a select list of classic fonts, and the poster is limited to a size of 10″ x 16″ printed on cardstock/30 lb paper.</p>",
     video:"",
     link:"https://chelseakwong.wordpress.com/avenir-typeface-specimen-poster/",
-    linkDesc:'See my work progress here'  
+    linkDesc:'Work Process'  
 }
 
 library.book = {
@@ -135,7 +152,7 @@ library.book = {
     caption:"<a href = 'img_ME/design/bookCopy.pdf'><h4>Complete book here</h4></a> <p>A visual book that documents the different types of personality disorders. The objective of this project is to summarize and incorporate all that we have learned in the class, such as hierarchy, grid system, illustration, and use of colors, to create a bound book. </p>",
     video:"",
     link:"https://chelseakwong.wordpress.com/visual-book/",
-    linkDesc:'See my work progress here'  
+    linkDesc:'Work Process'  
 }
 
 library.rif = {
@@ -144,13 +161,13 @@ library.rif = {
     caption:"<p>A redesign of Reading is Fundamental Pittsburgh, a non-profit organization that helps improve literacy among children in Pittsburgh. There was a list of organizations we could choose from to redesign for, all of whom had inefficient websites currently, and our goal of the project is to not only make the websites more appealing, but also easily navigable and user-friendly.</p> <p>The requirements of the project were 1) we had to create at least two pages, one for the main home page, and another of a sub-page. 2) we have to include interaction in our design, showing how dynamic content will be shown to the users.</p>",
     video:"",
     link:"https://chelseakwong.wordpress.com/web-redesign-rif-pittsburgh/",
-    linkDesc:'See my work progress here'  
+    linkDesc:'Work Process'  
 }
 
 library.cocktails = {
     img:["img_ME/design/fyeahcocktails.png"],
-    details:"<h4>Sept 2015. Hackathon.</h4>",
-    caption:"<p>A simple website that displays a gallery of cocktails and how to make them. Used Yummly API for fetching cocktail ingredients. Created at Big Red Hacks. </p>",
+    details:"Sept 2015. Hackathon.",
+    caption:"A simple website that displays a gallery of cocktails and how to make them. Used Yummly API for fetching cocktail ingredients. Created at Big Red Hacks.",
     video:"",
     link:"http://fyeah.co/",
     linkDesc:'Fyeah.co/cktails'  
@@ -177,14 +194,14 @@ function getHtmlImg(title){
 }
 
 function getCaption(title){
-    var caption = library[title].details;
-    caption += library[title].caption;
-    if (library[title].video.length != 0){
-        caption += library[title].video;
-    }
+    var caption = "<h4>"+library[title].details+"</h4>";
+    caption += "<p>"+library[title].caption+"</p>";
     if (library[title].link.length !=0){
-        caption += "<a href='"+library[title].link+
-            "'>"+"<h4>"+library[title].linkDesc+"</h4></a>";
+        caption += "<a href="+"'"+library[title].link+
+            "'"+">" + "<span class='glyphicon glyphicon-link'></span> " + library[title].linkDesc + "</a>";
+    }
+    if (library[title].video.length != 0){
+        caption += "<br>"+library[title].video;
     }
     return caption;
 }

@@ -23,17 +23,15 @@ $(document).ready(function(){
        $(this).find("img").removeClass( "hover" );
     });
     
-    $('.title-sub').click(function(){
+    $('.menu-btn').click(function(){
         $('nav').toggleClass('open');
         $('body').scrollTop(0);
         $('.container-fluid').toggle();
-        //        $('.container-fluid').css("visibility",'hidden');
-        // array navs brings menu and top button forward
         var arrayNavs = document.getElementsByTagName("nav");
         var navBar = arrayNavs[0];
-        navBar.style.position = 'relative';
-        navBar.style.zIndex = 999;
+        navBar.style.zIndex = 900;
         navBar.style.position = 'absolute';
+        
         var menuButton = document.getElementsByClassName("menu-btn");
         var menubtn = menuButton[0];
         menubtn.style.position = 'relative';
@@ -42,22 +40,11 @@ $(document).ready(function(){
         $(".menu-btn").css("visibility","visible")
         $(".menu-btn").toggleClass('close-btn');
         $('.container').toggle();
-        
-        //fix scroll
-        tempScrollTop = $(document.body).scrollTop();
-        $(".grid").css("position","fixed");
-    })
-    
-    $('.menu-btn').click(function(){
-        $(this).toggleClass('close-btn');
-//        $(this).css("visibility","hidden");
-        $('nav').toggleClass('open');
-        $('.container-fluid').toggle();
-        $('.container').toggle();
-        
+                
         //resume scroll
-        $(".grid").css("position","relative");
+        $(this).css("visibility","visible");
         $(window).scrollTop(tempScrollTop);
+        $(".grid").css("position","relative");
     })
     
     // init Masonry

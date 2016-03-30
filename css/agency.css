@@ -129,14 +129,15 @@
 /* END ANIMATION HEADER*/
 
 .container-about{
-    padding-left: 55px;
+/*    padding-left: 55px;*/
 }
+
 
 .copyright{
     font-family: "Roboto Slab";
-    padding-left: 40px;
+/*    padding-left: 40px;*/
     font-size: 12px;
-    padding-bottom: 30px;
+/*    padding-bottom: 30px;*/
     color: darkgrey;
 }
 
@@ -150,7 +151,7 @@
 }
 
 #about{
-    padding-top: 100px;
+/*    padding-top: 100px;*/
     padding-left: 40px;
     width:70%;
 }
@@ -870,8 +871,6 @@ body {
 h1.title-sub{
     background-color: black;
     color: white;
-/*    text-decoration: underline;*/
-    cursor: pointer;
 }
 
 .title-sub:hover{
