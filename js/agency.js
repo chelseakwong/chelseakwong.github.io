@@ -14,6 +14,10 @@ function cycleItems() {
     })
 }
 
+function parser(jsonFile){
+    
+}
+
 $(document).ready(function(){
     
     //add hover states for grid items
