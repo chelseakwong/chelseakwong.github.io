@@ -8,7 +8,7 @@ var library = {};
 
 library.AudioLight = {img:["img_ME/audioLight.png"],
                       details:"Jan. 2016. Individual Project.",
-                      video:"<iframe src='https://player.vimeo.com/video/153323520' width='300' height='281' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+                      video:"<iframe src='https://player.vimeo.com/video/153323520' width='580' height='360' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
                       caption:"This is an Audio Visualizer built for the class Interactive Arts and Computational Design. The color dots on the wheel enlarge and blur when there is a sudden loudness in the audio. I designed the color light wheel such that the dots are all primary CYMK colors, and so when the circles overlap each other they create new colors based on which other ones they are overlapping with. I thought it would be interesting to look at.",
                       link:"https://github.com/chelseakwong/Audio-Visualizer",
                       linkDesc:"Github"
@@ -70,7 +70,7 @@ library.LedLamp = {
     details:"<h4>July 2014. Personal Project.</h4>",
     caption:"<p>A summer project done in my free time. Programmed with a micro-controller, and constructed a circuit to create an interactive lamp that changes colors and patterns when someone touches it. Self-taught Arduino and USBASP programming to address LED strings in order to create different effects.</p>",
     link:" ",
-    video:'<iframe src="https://player.vimeo.com/video/99864380" width="200" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+    video:'<iframe src="https://player.vimeo.com/video/99864380" width="580" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
     linkDesc:""
 }
 
@@ -79,7 +79,7 @@ library.TowerDefense = {
     details:"<h4>Dec 2014. Class Project.</h4>",
     caption:"<p>Made for the intro computer science class, 15-112, at Carnegie Mellon University. A tower defense game implemented with PyGame in Python.</p>",
     link:"https://github.com/chelseakwong/Chelsea-s-Minimal-Tower-Defense",
-    video:'<iframe src="https://player.vimeo.com/video/113585265" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+    video:'<iframe src="https://player.vimeo.com/video/113585265" width="580" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
     linkDesc: "GitHub"
 }
 

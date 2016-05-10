@@ -68,7 +68,8 @@ $(document).ready(function(){
 
 	//MODALS
 	$('.thumbnail').click(function(){
-		$('.modal-body').empty();        
+		$('.modal-body').empty(); 
+        $('.text-box').empty();
 		var title = $(this).parent('a').attr("name");
         var id = $(this).parent('a').attr('title');
 		var caption = library[id].caption;
@@ -80,12 +81,12 @@ $(document).ready(function(){
 			getHtmlImg(id) + 
             "<h2 id='modal-prev'> Prev </h2>" +
 			"<h2 id='modal-next'> Next </h2>" +
-            "</div>" +
-            "<div class='caption-modal'>" +
-			getCaption(id) + "</div>" + "</div>" + "</div>"
-			);
+            "</div>"+ "</div>" + "</div>" );
+        
+        var captionHtml = ("<div class='caption-modal'>" + getCaption(id) + "</div>");
+        
 		$(newHtml).appendTo('.modal-body');
-
+        $(captionHtml).appendTo('.text-box');
 		$('#myModal').modal({show:true});
         
         //prevent scrolling of body when in modal
