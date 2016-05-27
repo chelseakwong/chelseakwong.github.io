@@ -97,16 +97,16 @@ library.phonecase = {
     details:"<h4>June 2013. Personal Project.</h4>",
     caption:"<p>First started as an art and graphic design project, then decided to put it on a phone case. Original art drawn with ink.</p>",
     video:"",
-    link:" ",
+    link:"",
     linkDesc:''  
 }
 
 library.elkSculp = {
     img:["img_ME/art/elk.jpg"],
     details:"<h4>June 2014. Personal Project.</h4>",
-    caption:"",
+    caption:"<p>Created with Illustrator.</p>",
     video:"",
-    link:" ",
+    link:"",
     linkDesc:''  
 }
 

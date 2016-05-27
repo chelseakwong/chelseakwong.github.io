@@ -51,20 +51,38 @@ $(document).ready(function(){
         $(".grid").css("position","relative");
     })
     
-    // init Masonry
-    var $grid = $('.grid').masonry({
+    var $grid = $('.grid').isotope({
         itemSelector: '.grid-item',
-        //percentPosition: true,
-        columnWidth: 350,
-        gutter: 20,
-        isFitWidth: true
-    });
-    
+        masonry: {
+            columnWidth: 350,
+            gutter: 20,
+            fitWidth: true
+        }
+    })
+      
   // layout Isotope after each image loads
     $grid.imagesLoaded().progress( function() {
-        $grid.masonry('layout');
-    });  
+        $grid.isotope('layout');
+    });
 
+    $('#All').addClass("selected");
+    $('#All').css('color','white');
+    
+    $('.spanSel').click(function(){
+        $('.selectFilter').children('span').each(function(){
+            $(this).removeClass("selected");
+            $(this).css('color', 'black');
+        })
+        $(this).addClass("selected");
+        $(this).css('color','white');
+        filter = "." + $(this).attr('id');
+        if ($(this).attr('id')=="All"){
+            $grid.isotope({filter:'*'});
+        }else{
+            $grid.isotope({filter: filter});
+        }
+        
+    });
 
 	//MODALS
 	$('.thumbnail').click(function(){
@@ -79,8 +97,8 @@ $(document).ready(function(){
             "<div class='container-modal' id='testModal'>"+
             "<div class='img-modal' style='display: inline-block;'>"+
 			getHtmlImg(id) + 
-            "<h2 id='modal-prev'> Prev </h2>" +
-			"<h2 id='modal-next'> Next </h2>" +
+            "<h2 id='modal-prev'><span class='glyphicon glyphicon-chevron-left' aria-hidden='true'></span></h2>" +
+			"<h2 id='modal-next'><span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span></h2>" +
             "</div>"+ "</div>" + "</div>" );
         
         var captionHtml = ("<div class='caption-modal'>" + getCaption(id) + "</div>");
@@ -113,20 +131,21 @@ $(document).ready(function(){
     }, function() {
        $(this).find("img").removeClass( "hover" );
     });
-        
-    //add hover states in lightbox
-    if (itemAmt > 1){
-            $('.container-modal').hover(function(){
-            $(this).find("h2").css("visibility", "visible");
-        }, function(){
-            $(this).find("h2").css("visibility", "hidden");
-        });
-
-        $('.container-modal h2').hover(function(){
-            $(this).css("background-color", "rgba(0,0,0,0.5)");
-        }, function(){
-            $(this).css("background-color", "rgba(0,0,0,0.3)");
-        });
+       
+    //remove next prev buttons if only 1
+    if (itemAmt == 1){
+        $('#modal-prev').remove();
+        $('#modal-next').remove();
+    } else{
+        $('.container-modal').hover(
+            function(){
+                $('#modal-prev').css('visibility','visible');
+                $('#modal-next').css('visibility','visible');
+            }, function(){
+                $('#modal-prev').css('visibility','hidden');
+                $('#modal-next').css('visibility','hidden');
+            }
+        );
     }
         
     //next and prev buttons on slider
@@ -153,6 +172,7 @@ $(document).ready(function(){
             cycleItems();
         }
     });
+        
 	
 	$('.close').click(function(){
         clearInterval(autoSlide);
@@ -161,6 +181,9 @@ $(document).ready(function(){
         $(window).scrollTop(tempScrollTop);
 	});
         
-
+    
+        
+    
+        
 })});
 
