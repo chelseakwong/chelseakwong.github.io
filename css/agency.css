@@ -904,11 +904,7 @@ body {
 h1.title-sub{
     background-color: black;
     color: white;
-}
-
-.title-sub:hover{
-   letter-spacing: 5px; 
-    opacity: .2;
+    line-height: 38px;
 }
 
 .containerheader{
