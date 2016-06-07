@@ -6,6 +6,27 @@
 */
 var library = {};
 
+library.megakanji = {img: ["img_ME/megakanji/angry_chars_comp.jpg",
+                          "img_ME/megakanji/sample.png"],
+                     details:"April. 2016. Individual Project.",
+                     video:"",
+                     caption:"I created a Mega Kanji generator that combines similar meaning kanjis together to form a new kanji, 'Mega Kanji.' These aren't real, legible kanjis but rather a conglomerate of other real kanjis; mega-kanjis are supposed to appear legitimate but are not, in fact. I wanted to do this because I had to learn to write Chinese characters, (which are very similar to kanjis in Japanese) diligently – each stroke in a character must be in order and in the right place, such that the form of the character emerges correctly. Coming across the KanjiVG database inspired me to investigate the possibilities of creating new kanjis. I was also inspired by the NeoKanji twitter bot made by @hardmaru. <br><br> My program combines similar-meaning kanjis to form a new kanji. Above shows 10 different iterations. I referred to the machine-learning algorithm that @hardmaru had already written, and modified the parameters of stroke-length and deviation-threshold to fit my purpose. My software trains the machine with a set of kanjis (only those that mean angry in this example), so that the machine biases heavily on the ways the strokes of 'angry' kanjis are drawn. Afterwards, the machine will sample new SVG's and, because of the way I've trained it, it will generate conglomerate, mega-kanjis.",
+                     link:"https://github.com/chelseakwong/MegaKanji",
+                     linkDesc:"Github"}
+
+library.tragedies = {img:["img_ME/tragedies/bentorodrigues_comp.jpg",
+                          "img_ME/tragedies/chennaifloods_comp.jpg",
+                          "img_ME/tragedies/gaza_comp.jpg",
+                          "img_ME/tragedies/parisattacks_comp.jpg",
+                          "img_ME/tragedies/shenzhenlandslide_comp.jpg",
+                          "img_ME/tragedies/chennaifloods_comp.jpg",
+                          "img_ME/tragedies/tianjin_comp.jpg"],
+                    details:"March. 2016. Individual Project.",
+                    video:"",
+                    caption:"This project was created to visualize the colors of tragic events happening in 2015, to decontextualize the tragedies by extracting only the colors from photos taken of these events. The purpose of this was to see if images from social media correlate strongly to the actual images happening, and what does it look like if I juxtapose these grids of colors of disasters next to each other. Would people be able to relate events to colors with some context? I handpicked 7 events from 2015 that had a lot of media coverage so I had sufficient data points to draw accurate results: Paris Attacks, Gaza Conflict, TianJin Factory Explosions, ShenZhen Landslide, Chennai Floods, and Bento Rodrigues dam disaster. <br> <br>To achieve this, I coded an Instagram image scraper that collected images from Instagram corresponding to each event, and a color-extractor that does the following: for each set of images from an event, calculate the top 100 colors across all images, sort them by frequency of appearance, and then create a grid with them.",
+                    link:"https://github.com/chelseakwong/InstaColorCollector",
+                    linkDesc:"Github"}
+
 library.AudioLight = {img:["img_ME/audioLight.png"],
                       details:"Jan. 2016. Individual Project.",
                       video:"<iframe src='https://player.vimeo.com/video/153323520' width='580' height='360' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",

@@ -325,6 +325,7 @@ body {
     height: 100%;
 /*    border: 1px solid black;*/
     vertical-align: middle;
+    overflow-y: hidden;
 }
 
 .container-modal {
@@ -393,7 +394,6 @@ body {
 /*    cursor: pointer;*/
     text-align: center;
     position: relative;
-  
 }
 .container-modal img {
 /*    max-width: 80%;*/
