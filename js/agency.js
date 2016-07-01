@@ -19,7 +19,15 @@ function parser(jsonFile){
 }
 
 $(document).ready(function(){
-    
+    //tool tip initialization
+    $('.toolhover').tooltipster({
+        theme: ['tooltipster-borderless', 'tooltipster-borderless-customized'],
+        animation: 'grow',
+        animationDuration: 250,
+        delay: 100,
+        plugins: ['follower']
+    });
+
     //add hover states for grid items
     $( ".grid-item" ).hover(function() {
         $(this).find("img").addClass("hover");
@@ -89,7 +97,7 @@ $(document).ready(function(){
 		$('.modal-body').empty(); 
         $('.text-box').empty();
 		var title = $(this).parent('a').attr("name");
-        var id = $(this).parent('a').attr('title');
+        var id = $(this).parent('a').attr('description');
 		var caption = library[id].caption;
 		$('.modal-title').html(title);
 		var newHtml = (

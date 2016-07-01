@@ -19,14 +19,25 @@
     <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-<!--	jquery-->
+    
+    
+          
+    <!--	jquery-->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
     <script src="js/modernizr.custom.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!--  tool tipster  -->
+    <link rel="stylesheet" type="text/css" href="css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/tooltipster-follower.min.css" />
+
+    <script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
+    <script type="text/javascript" src="js/tooltipster-follower.min.js"></script>
+
+    
     
     <script type="text/javascript" src="js/elastic_grid.min.js"></script>
     
@@ -116,22 +127,18 @@
 
     </nav>
     
-        <div class="menu-btn"></div>
-
+    
+    <div class="menu-btn"></div>
      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
          <div id = "lcol" class="cbp-af-header">
-        <div class="cbp-af-inner">
-            <h1 class ="title">Chelsea Kwong</h1>
-            <span id="slash"><h1>/</h1></span>	
-            <h1 class ="title-sub">Works</h1>
-            <div class="selectFilter"> 
-                <span class="spanSel" id="All">All</span> / <span class="spanSel"  id="Design">Design</span> / <span class="spanSel"  id="Tech">Tech</span></div>
-            </div>
-            </div>
-            </div>
-            </div>
+             <div class="cbp-af-inner">
+                 <h1 class ="title">Chelsea Kwong</h1>
+                 <span id="slash"><h1>/</h1></span>	
+                 <h1 class ="title-sub">Works</h1>
+                 <div class="selectFilter"> 
+                     <span class="spanSel" id="All">All</span> / <span class="spanSel"  id="Design">Design</span> / <span class="spanSel"  id="Tech">Tech</span></div>
+             </div>
+         </div>
     </nav>
 		
     
@@ -145,128 +152,125 @@
                     <div class = "grid-sizer"></div>
                 <!-- images	-->
                     <div class="grid-item Design Tech">
-                    <a href = "#" title="megakanji" name="Mega-Kanjis">
-							<img src="img_ME/megakanji/sample.png" class="thumbnail img-responsive"> 
+                    <a href = "#" description="megakanji" name="Mega-Kanjis">
+							<img src="img_ME/megakanji/sample.png" class="thumbnail img-responsive toolhover" title="Mega Kanji generator"> 
 						</a>     
                     </div>
                     
                     <div class="grid-item Design Tech">
-                    <a href = "#" title="tragedies" name="Colors of Tragedies">
-							<img src="img_ME/tragedies/ParisAttacks.png" class="thumbnail img-responsive"> 
+                    <a href = "#" description="tragedies" name="Colors of Tragedies">
+							<img src="img_ME/tragedies/ParisAttacks.png" class="thumbnail img-responsive toolhover" title="Instagram: Colors of tragedies"> 
 						</a>     
                     </div>
                     
                     <div class="grid-item Design Tech">
-						<a href = "#" title="GenerativePolygonArt" name="Generative Polygon Art">
-							<img src="img_ME/genArt/3.png" class="thumbnail img-responsive"> 
+						<a href = "#" description="GenerativePolygonArt" name="Generative Polygon Art">
+							<img src="img_ME/genArt/3.png" class="thumbnail img-responsive toolhover" title="Generative Polygon Art Bot"> 
 						</a>                                 
                     </div>
                     
                     <div class="grid-item Design Tech">
-						<a href = "#" title="AudioLight" name="Audio Color Light Wheel">
-							<img src="img_ME/audioLight.png" class="thumbnail img-responsive"> 
+						<a href = "#" description="AudioLight" name="Audio Color Light Wheel">
+							<img src="img_ME/audioLight.png" class="thumbnail img-responsive toolhover" title="Audio-reactive light wheel"> 
 						</a>                                 
                     </div>
                     
                     <div class="grid-item Tech">
-						<a href = "#" title="GrumbleBee" name="Grumble Bee">
-							<img src="img_ME/grumblebee/main.png" class="thumbnail img-responsive"> 
+						<a href = "#" description="GrumbleBee" name="Grumble Bee">
+							<img src="img_ME/grumblebee/main.png" class="thumbnail img-responsive toolhover" title="Grumble Bee, a forum"> 
 						</a>                                 
                     </div>
                     
                       <div class="grid-item Tech">
-						<a href = "#" title="Iris" name="Iris">
-							<img src="img_ME/Iris/Prototype.png" class="thumbnail img-responsive"> 
+						<a href = "#" description="Iris" name="Iris">
+							<img src="img_ME/Iris/Prototype.png" class="thumbnail img-responsive toolhover" title="Iris daily planner"> 
 						</a>                                 
                     </div>
                     
                     <div class="grid-item Design">
-						<a href = "#" title="Prepper" name="Prepper">
-							<img src="img_ME/Prepper/main_all.jpg" class="thumbnail img-responsive">
+						<a href = "#" description="Prepper" name="Prepper">
+							<img src="img_ME/Prepper/main_all.jpg" class="thumbnail img-responsive toolhover" title="Prepper mobile app">
 						</a>
                     </div>
                     
                   <div class="grid-item Design">
-						<a href = "#" title="book" name="Visual Book Design for Personality Disorders">
-							<img src="img_ME/design/book1.jpg" class="thumbnail img-responsive">
+						<a href = "#" description="book" name="Visual Book Design for Personality Disorders">
+							<img src="img_ME/design/book1.jpg" class="thumbnail img-responsive toolhover" title="Visual book about personality disorders">
 						</a>
                     </div>
                     
                     <div class="grid-item Design Tech">
-						<a href = "#" title="cocktails" name="Fyeah Cocktails">
-							<img src="img_ME/design/fyeahcocktails.png" class="thumbnail img-responsive">
+						<a href = "#" description="cocktails" name="Fyeah Cocktails">
+							<img src="img_ME/design/fyeahcocktails.png" class="thumbnail img-responsive toolhover" title="How to Cocktail website">
 						</a>
                     </div>
                     
                       <div class="grid-item Tech">
-						<a href = "#" title="LedLamp" name="LED Lamp">
-							<img src="img_ME/ledLamp/1.jpg" class="thumbnail img-responsive">
+						<a href = "#" description="LedLamp" name="LED Lamp">
+							<img src="img_ME/ledLamp/1.jpg" class="thumbnail img-responsive toolhover" title="Touch LED Lamp">
 						</a>
                     </div>
                     
                      <div class="grid-item Design">
-						<a href = "#" title="avenir" name="Avenir Typography Poster">
-							<img src="img_ME/design/avenir.png" class="thumbnail img-responsive">
+						<a href = "#" description="avenir" name="Avenir Typography Poster">
+							<img src="img_ME/design/avenir.png" class="thumbnail img-responsive toolhover" title="Typography poster">
 						</a>
                     </div>
                     
                 <div class="grid-item Design Tech">
-                <a href = "#" title="FoodySlap" name="Foody Slap">
-                    <img src="img_ME/FoodySlap/open.png" class="thumbnail img-responsive">
+                <a href = "#" description="FoodySlap" name="Foody Slap">
+                    <img src="img_ME/FoodySlap/open.png" class="thumbnail img-responsive toolhover" title="Foody Slap web app">
                 </a>
             </div>
                     
                  <div class="grid-item Design">
-                    <a href = "#" title="asa" name="ASA Productions Logo Design">
-                        <img src="img_ME/art/asa2.png" class="thumbnail img-responsive">
+                    <a href = "#" description="asa" name="ASA Productions Logo Design">
+                        <img src="img_ME/art/asa2.png" class="thumbnail img-responsive toolhover" title="ASA Productions logo design">
                     </a>
                 </div>
                     
                  <div class="grid-item Design">
-                    <a href = "#" title="gestalt" name="Gestalt Compositions">
-                        <img src="img_ME/design/gestalt1.png" class="thumbnail img-responsive">
+                    <a href = "#" description="gestalt" name="Gestalt Compositions">
+                        <img src="img_ME/design/gestalt1.png" class="thumbnail img-responsive toolhover" title="Gestalt Compositions">
                     </a>
                 </div>
                     
                   <div class="grid-item Design">
-                    <a href = "#" title="rif" name="Website ReDesign for Reading is Fundamental Pittsburgh">
-                        <img src="img_ME/design/web1.jpg" class="thumbnail img-responsive">
+                    <a href = "#" description="rif" name="Website ReDesign for Reading is Fundamental Pittsburgh">
+                        <img src="img_ME/design/web1.jpg" class="thumbnail img-responsive toolhover" title="Web Redesign for RIF">
                     </a>
                 </div>
                     
                 <div class="grid-item Design">
-                    <a href = "#" title="KPL" name="KPL Shirt Design">
-                        <img src="img_ME/art/kplshirt.png" class="thumbnail img-responsive">
+                    <a href = "#" description="KPL" name="KPL Shirt Design">
+                        <img src="img_ME/art/kplshirt.png" class="thumbnail img-responsive toolhover" title="Kappa Phi Lambda shirt design">
                     </a>
                 </div>
                     
                 <div class="grid-item Design">
-                    <a href = "#" title="phonecase" name="Geometric Phone Case Design">
-                        <img src="img_ME/art/phonecase2.jpg" class="thumbnail img-responsive">
+                    <a href = "#" description="phonecase" name="Geometric Phone Case Design">
+                        <img src="img_ME/art/phonecase2.jpg" class="thumbnail img-responsive toolhover" title="Phone case design">
                     </a>
                 </div>
 
                 <div class="grid-item Design">
-                    <a href = "#" title="elkSculp" name="Elk Sculpture">
-                        <img src="img_ME/art/elk.jpg" class="thumbnail img-responsive">
+                    <a href = "#" description="elkSculp" name="Elk Sculpture">
+                        <img src="img_ME/art/elk.jpg" class="thumbnail img-responsive toolhover" title="Elk sculpture">
                     </a>
                 </div>
                     
                    
                 <div class="grid-item Design">
-                    <a href = "#" title="gotFortune" name="Got Fortune">
-                        <img src="img_ME/art/gotfortune.jpg" class="thumbnail img-responsive">
+                    <a href = "#" description="gotFortune" name="Got Fortune">
+                        <img src="img_ME/art/gotfortune.jpg" class="thumbnail img-responsive toolhover" title="Gift card design">
                     </a>
                 </div>
                     
                  <div class="grid-item Tech Design">
-                    <a href = "#" title="TowerDefense" name="Tower Defense">
-                        <img src="img_ME/towerDefense/1.png" class="thumbnail img-responsive">
+                    <a href = "#" description="TowerDefense" name="Tower Defense">
+                        <img src="img_ME/towerDefense/1.png" class="thumbnail img-responsive toolhover" title="Tower defense game">
                     </a>
                 </div>
-                    
-                   
-                    
                     
                 </div>
             </div>
