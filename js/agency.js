@@ -14,10 +14,6 @@ function cycleItems() {
     })
 }
 
-function parser(jsonFile){
-    
-}
-
 $(document).ready(function(){
     //tool tip initialization
     $('.toolhover').tooltipster({
@@ -74,15 +70,14 @@ $(document).ready(function(){
     });
 
     $('#All').addClass("selected");
-    $('#All').css('color','white');
     
     $('.spanSel').click(function(){
         $('.selectFilter').children('span').each(function(){
             $(this).removeClass("selected");
-            $(this).css('color', 'black');
+//            $(this).css('color', 'black');
         })
         $(this).addClass("selected");
-        $(this).css('color','white');
+//        $(this).css('color','black');
         filter = "." + $(this).attr('id');
         if ($(this).attr('id')=="All"){
             $grid.isotope({filter:'*'});
