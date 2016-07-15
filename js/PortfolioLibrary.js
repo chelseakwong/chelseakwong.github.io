@@ -90,7 +90,7 @@ library.LedLamp = {
     img:["img_ME/ledLamp/2.jpg","img_ME/ledLamp/1.jpg"],
     details:"<h4>July 2014. Personal Project.</h4>",
     caption:"<p>A summer project done in my free time. Programmed with a micro-controller, and constructed a circuit to create an interactive lamp that changes colors and patterns when someone touches it. Self-taught Arduino and USBASP programming to address LED strings in order to create different effects.</p>",
-    link:" ",
+    link:"",
     video:'<iframe src="https://player.vimeo.com/video/99864380" width="580" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
     linkDesc:""
 }
@@ -109,7 +109,7 @@ library.KPL = {
     details:"<h4>Dec 2013.</h4>",
     caption:"<p>Shirt design made for Kappa Phi Lambda.</p>",
     video:"",
-    link:" ",
+    link:"",
     linkDesc:''    
 }
 
@@ -150,7 +150,7 @@ library.gotFortune = {
 }
 
 library.gestalt = {
-    img:["img_ME/design/gestalt1.png","img_ME/design/gestalt2.png","img_ME/design/gestalt3.png","img_ME/design/gestalt4.png"],
+    img:["img_ME/design/gestalt1.png","img_ME/design/gestalt2.jpg","img_ME/design/gestalt3.png","img_ME/design/gestalt4.png"],
     details:"<h4>Jan 2015. Class Project.</h4>",
     caption:"<p>A poster of gestalt compositions that represents different words. This is an introductory project done in the class Communication Design Fundamentals, exploring form and composition and learning about gestalt principles.  The project aims to portray words with only black squares. The words portrayed are, in order, 'order,' 'tension,' 'congestion,' 'playfulness,' and 'comfort.'</p> <p>This project’s purpose is to provide students an opportunity to understand gestalt principles and utilize them in design, which is to convey meaning through whole compositions, to read beyond their individual parts. </p><p>Some constraints on our creations are that the squares must be filled in with black, they cannot overlap, and the image cannot be a literal interpretation of the word.</p>",
     video:"",
@@ -170,10 +170,10 @@ library.avenir = {
 library.book = {
     img:["img_ME/design/book1.jpg","img_ME/design/book2.png","img_ME/design/book3.png","img_ME/design/book4.png"],
     details:"<h4>March 2015. Class Project.</h4>",
-    caption:"<a href = 'img_ME/design/bookCopy.pdf'><h4>Complete book here</h4></a> <p>A visual book that documents the different types of personality disorders. The objective of this project is to summarize and incorporate all that we have learned in the class, such as hierarchy, grid system, illustration, and use of colors, to create a bound book. </p>",
+    caption:"<p>A visual book that documents the different types of personality disorders. The objective of this project is to summarize and incorporate all that we have learned in the class, such as hierarchy, grid system, illustration, and use of colors, to create a bound book. </p>",
     video:"",
     link:"https://chelseakwong.wordpress.com/visual-book/",
-    linkDesc:'Work Process'  
+    linkDesc:'Full book & Work Process'  
 }
 
 library.rif = {
@@ -216,11 +216,11 @@ function getHtmlImg(title){
 
 function getCaption(title){
     var caption = "<h4>"+library[title].details+"</h4>";
-    caption += "<p>"+library[title].caption+"</p>";
     if (library[title].link.length !=0){
-        caption += "<a href="+"'"+library[title].link+
+        caption += "<a class='caption-link' href="+"'"+library[title].link+
             "'"+">" + "<span class='glyphicon glyphicon-link'></span> " + library[title].linkDesc + "</a>";
     }
+    caption += "<hr><p>"+library[title].caption+"</p>";
     if (library[title].video.length != 0){
         caption += "<br>"+library[title].video;
     }

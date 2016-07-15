@@ -51,8 +51,7 @@ $(document).ready(function(){
         menubtn.style.position = 'fixed';
         $(".menu-btn").css("visibility","visible")
         $(".menu-btn").toggleClass('close-btn');
-        $('.container').toggle();
-                
+        $('.container').toggle();        
         //resume scroll
         $(this).css("visibility","visible");
         $(window).scrollTop(tempScrollTop);

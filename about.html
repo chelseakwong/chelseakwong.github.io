@@ -61,7 +61,9 @@
    
 	<!-- Portfolio Library	-->
     <script src="js/PortfolioLibrary.js"></script>
-
+ 
+    <!-- Vivus for svg animation   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.1/vivus.min.js"></script>
     <!--  Overlay CSS  -->
         <link href="css/menuStyle.css" rel="stylesheet">
     
@@ -87,14 +89,12 @@
 </head>
     
 <body class="index">
-<!--        <div class="menu-btn"></div>-->
-
     <nav id="menu-load">
         <!-- Navigation -->
         <ul>
          <br> 
             <li>
-            <img id="navlogo" src="img_ME/chelsealogosdf.png">
+                <img id="navlogo" src="img_ME/chelsealogosdf.png">
             </li>
             <li class="line">
                 <span>Nice to meet you</span>
@@ -136,10 +136,12 @@
         </div>
     </nav>
         <div class = "container-fluid container-about">
-        <div class="row">
-            
-        </div>
-        <div id ="about">
+            <div class="row">
+                <div class="col-md-2">
+                <div id="logoAnimation"></div>
+            </div>
+            <div class="col-md-10">
+            <div id ="about">
             
             <p>Hello! Thanks for visiting my website. I am a student at Carnegie Mellon University, obtaining a Bachelor of Science in <code>Electrical and Computer Engineering</code> with a minor in Design. I enjoy working on interdisplinary projects, and building things from the ground up. Full stack? Check.
             <br><br>My favorite things to do besides design and <code>coding</code> are going on photography trips and exploring the outdoors, and picking up new hobbies (currently its longboarding). <br><br>
@@ -148,12 +150,32 @@
             <br><br>Thanks <a href="http://masonry.desandro.com/">Masonry.js</a> for the grid plugin.
             </p>
         </div>
+                </div>
+                
+            </div>
+
+        
     
     </div>
     </body>
     <footer>
  
     <div class="copyright footer" align="left"><code>Copyright &copy; 2016 Design & Code by Chelsea Kwong</code></div>
+        
+    <script>
+               $(document).ready(function(){
+        console.log("hello");
+        new Vivus('logoAnimation',
+                  {duration: 300, 
+                   type: 'oneByOne',
+                   start:'inViewport',
+                   file: 'img_ME/websiteLogo.svg',
+                    onReady: function (myVivus) {
+                    // `el` property is the SVG element
+                        myVivus.el.setAttribute('height', '200');
+                    }
+                  })});      
+    </script>
 
 </footer>
 
