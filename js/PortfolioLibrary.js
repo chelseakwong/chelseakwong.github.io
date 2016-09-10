@@ -6,6 +6,15 @@
 */
 var library = {};
 
+library.presidentVideo = {img:["img_ME/presidentScreenshot.png"],
+                          details:"May. 2016.",
+                          video: '<iframe src="https://player.vimeo.com/video/165109329" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+                          caption:"This project finds the 25 most frequently said words in a select set of presidential speeches from AmericanRhetoric.com, and compiles the results in a video format with automation--there was 0 manual curation done in creating this sequence of clips. The video shows the respective presidents saying those words. <br><br> Several different technologies were used to create this video. First, I used BeautifulSoup.py to scrape presidential speech transcripts and their videos from AmericanRhetoric.com--only some select transcripts from the website had videos. After gathering transcripts and videos, I used the Gentle Forced Aligner to process each speech, extracting the time when each word is spoken to a JSON file. The results were often accurate, but sometimes the aligner was not able to process some parts of a speech. Having transcripts, videos, and JSON files of when words are said in the transcript for each video, I then wrote Python scripts that helped me find the most common words in these speeches, phrases containing these words, and sentences containing these words. I tried different ways to use the information I have but finally settled on just using the words themselves, not the containing sentence or phrase, for this project. Once I had the most common words spoken with the times when they were spoken in each video, I used Movie.py to string together clips from each video in a sequence and to add scaffolding-- the screen showing number and word for each new word introduced.",
+                          link:"https://github.com/chelseakwong/PresidentialWords",
+                          linkDesc:"Github"
+                          
+}
+
 library.megakanji = {img: ["img_ME/megakanji/angry_chars_comp.jpg",
                           "img_ME/megakanji/sample.png"],
                      details:"April. 2016. Individual Project.",
@@ -104,37 +113,10 @@ library.TowerDefense = {
     linkDesc: "GitHub"
 }
 
-library.KPL = {
-    img:["img_ME/art/kplshirt.png"],
-    details:"<h4>Dec 2013.</h4>",
-    caption:"<p>Shirt design made for Kappa Phi Lambda.</p>",
-    video:"",
-    link:"",
-    linkDesc:''    
-}
-
 library.phonecase = {
       img:["img_ME/art/phonecase1.jpg","img_ME/art/phonecase2.jpg"],
     details:"<h4>June 2013. Personal Project.</h4>",
     caption:"<p>First started as an art and graphic design project, then decided to put it on a phone case. Original art drawn with ink.</p>",
-    video:"",
-    link:"",
-    linkDesc:''  
-}
-
-library.elkSculp = {
-    img:["img_ME/art/elk.jpg"],
-    details:"<h4>June 2014. Personal Project.</h4>",
-    caption:"<p>Created with Illustrator.</p>",
-    video:"",
-    link:"",
-    linkDesc:''  
-}
-
-library.asa = {
-    img:["img_ME/art/asa1.jpg","img_ME/art/asa2.png","img_ME/art/asa3.jpg"],
-    details:"<h4>Oct 2014. Community.</h4>",
-    caption:"<p>Logo for ASA productions, a committee of Asian Student Association who creates videos to promote the organization.</p>",
     video:"",
     link:"",
     linkDesc:''  
@@ -220,9 +202,11 @@ function getCaption(title){
         caption += "<a class='caption-link' href="+"'"+library[title].link+
             "'"+">" + "<span class='glyphicon glyphicon-link'></span> " + library[title].linkDesc + "</a>";
     }
-    caption += "<hr><p>"+library[title].caption+"</p>";
     if (library[title].video.length != 0){
-        caption += "<br>"+library[title].video;
+        caption += "<hr><br><br>"+library[title].video+"<br><br>";
+        caption += "<p>"+library[title].caption+"</p>";
+    } else{
+        caption += "<hr><p>"+library[title].caption+"</p>";
     }
     return caption;
 }
