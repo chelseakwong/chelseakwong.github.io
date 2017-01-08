@@ -6,13 +6,12 @@
 */
 var library = {};
 
-library.presidentVideo = {img:["img_ME/presidentScreenshot.png"],
-                          details:"May. 2016.",
+library.presidentVideo = {img: ["img_ME/presidentScreenshot.png"],
+                          details: "May. 2016.",
                           video: '<iframe src="https://player.vimeo.com/video/165109329" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
-                          caption:"This project finds the 25 most frequently said words in a select set of presidential speeches from AmericanRhetoric.com, and compiles the results in a video format with automation--there was 0 manual curation done in creating this sequence of clips. The video shows the respective presidents saying those words. <br><br> Several different technologies were used to create this video. First, I used BeautifulSoup.py to scrape presidential speech transcripts and their videos from AmericanRhetoric.com--only some select transcripts from the website had videos. After gathering transcripts and videos, I used the Gentle Forced Aligner to process each speech, extracting the time when each word is spoken to a JSON file. The results were often accurate, but sometimes the aligner was not able to process some parts of a speech. Having transcripts, videos, and JSON files of when words are said in the transcript for each video, I then wrote Python scripts that helped me find the most common words in these speeches, phrases containing these words, and sentences containing these words. I tried different ways to use the information I have but finally settled on just using the words themselves, not the containing sentence or phrase, for this project. Once I had the most common words spoken with the times when they were spoken in each video, I used Movie.py to string together clips from each video in a sequence and to add scaffolding-- the screen showing number and word for each new word introduced.",
+                          caption:"This program finds the 25 most frequently said words in a select set of presidential speeches from AmericanRhetoric.com, and compiles the results in a video format with automation; there was 0 manual curation done in creating this sequence of clips. This project was made during the election season, and the political climate inspired me to investigate past presidential speeches, juxtaposing different presidents enunciating the same words. <br><br> Several different technologies were used to create this video. First, I used BeautifulSoup.py to scrape presidential speech transcripts and their videos from AmericanRhetoric.com. After gathering transcripts and videos, I used the Gentle Forced Aligner to process each speech, extracting the time when each word is spoken to a JSON file. The results were often accurate, but sometimes the aligner was not able to process some parts of a speech. Having transcripts, videos, and JSON files of when words are said in the transcript for each video, I then wrote a Python program that helped me find the most common words in these speeches, phrases containing these words, and sentences containing these words. I tried different ways to use the information I have but finally settled on just using the words themselves, not the containing sentence or phrase, for this project. Once I had the most common words spoken with the times when they were spoken in each video, I used Movie.py to string together clips from each video in a sequence and to add scaffolding-- the screen showing number and word for each new word introduced.",
                           link:"https://github.com/chelseakwong/PresidentialWords",
                           linkDesc:"Github"
-                          
 }
 
 library.megakanji = {img: ["img_ME/megakanji/angry_chars_comp.jpg",
@@ -73,16 +72,6 @@ library.Prepper = {img:["img_ME/Prepper/main_screen.jpg",
                    caption:"<p>Prepper is a personalized recipe mobile application, designed to revolutionize how we prepare, consume, and purchase meals. Its purpose is to save the user time and money and promote healthy eating. This is accomplished through its Recipe, Inventory, and Grocery List functions. The digital inventory can be updated by scanning grocery receipts and item barcodes, or by manual entry. </p> <p>A unique feature of Prepper is the notification of item expiration dates to reduce food waste. Recipes are automatically generated according to the items currently in the user’s inventory. These recipes can be filtered by categories such as calorie content, cook time, and ingredient expiration date. When an item is used up, it is automatically sent to a manageable To-Buy list to ease the burden of grocery shopping.</p> <p>Our team of 6 designed this product to enroll in the Society of Asian Scientists and Engineers annual nationwide Innoservice competition, our team was a finalist.</p>",
                    link: "documents/PrepperFinalReport.pdf",
                    linkDesc: "Product Final Report"
-}
-
-library.FoodySlap = {img:["img_ME/FoodySlap/open.png",
-                         "img_ME/FoodySlap/instructions.jpg",
-                         "img_ME/FoodySlap/gallery.jpg"],
-                     details:"<h4>Sept. 2014. Group Project. Hack the North.</h4>",
-                     video:"",
-                     caption:"Tinder for restaurants, a webapp that allows users to browse through nearby restaurants on 'cards.' If connected to Leap Motion the webapp could interact with the user's hand gestures to move cards. Used Yelp API to acquire information about restaurants. Worked with a team of 4 at Hack the North.</p>",
-                     link: "https://github.com/chelseakwong/FoodySlap",
-                     linkDesc: "GitHub"
 }
 
 library.Iris = {
@@ -167,31 +156,30 @@ library.rif = {
     linkDesc:'Work Process'  
 }
 
-library.cocktails = {
-    img:["img_ME/design/fyeahcocktails.png"],
-    details:"Sept 2015. Hackathon.",
-    caption:"A simple website that displays a gallery of cocktails and how to make them. Used Yummly API for fetching cocktail ingredients. Created at Big Red Hacks.",
-    video:"",
-    link:"http://fyeah.co/",
-    linkDesc:'Fyeah.co/cktails'  
-}
-
-//library.title
+// fetch single video or series of images for carousel
+// also set height of .modal-body accordingly
 function getHtmlImg(title){
     var tot = "";
-    for(i = 0;i<library[title].img.length;i++){
-        if (i ==0){
-            var imgSrc =  "<img src='" + 
-                (library[title].img[i]) +
-                "'/></div>";
-            tot += imgSrc;
-        }
-        else{
-            var div = "<div><img src='"+
-                (library[title].img[i])+
-                "'/></div>";
-            tot += div;
-        }
+    if (library[title].video != ""){
+        tot += (library[title].video + "</div>");
+        $(".modal-body").css("height", "auto");
+    }
+    else{
+        $(".modal-body").css("height", "70%");
+        for(i = 0;i<library[title].img.length;i++){
+            if (i==0){
+                var imgSrc =  "<img src='" + 
+                    (library[title].img[i]) +
+                    "'/></div>";
+                tot += imgSrc;
+            }
+            else{
+                var div = "<div><img src='"+
+                    (library[title].img[i])+
+                    "'/></div>";
+                tot += div;
+            }
+        }    
     }
     return tot;
 }
@@ -202,11 +190,6 @@ function getCaption(title){
         caption += "<a class='caption-link' href="+"'"+library[title].link+
             "'"+">" + "<span class='glyphicon glyphicon-link'></span> " + library[title].linkDesc + "</a>";
     }
-    if (library[title].video.length != 0){
-        caption += "<hr><br><br>"+library[title].video+"<br><br>";
-        caption += "<p>"+library[title].caption+"</p>";
-    } else{
-        caption += "<hr><p>"+library[title].caption+"</p>";
-    }
+    caption += "<hr><p>"+library[title].caption+"</p>";
     return caption;
 }

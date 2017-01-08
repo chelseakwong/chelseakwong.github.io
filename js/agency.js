@@ -14,10 +14,6 @@ function cycleItems() {
     })
 }
 
-function parser(jsonFile){
-    
-}
-
 $(document).ready(function(){
     //tool tip initialization
     $('.toolhover').tooltipster({
