@@ -134,8 +134,8 @@
 
 #modal-close-btn{
     background-image: url('../img_ME/cross.png');
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     background-size: cover;
     display: inline;
     z-index: 99;
