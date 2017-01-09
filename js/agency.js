@@ -113,8 +113,7 @@ $(document).ready(function(){
         //prevent scrolling of body when in modal
         //remember previous scroll position so can reset after we close modal
         tempScrollTop = $(document.body).scrollTop();
-        $(".grid").css("position","fixed");
-        
+        $(".grid").css("position","fixed");        
         currentIndex = 0,
 		items = $('#testModal div'),
   		itemAmt = items.length;
@@ -134,6 +133,7 @@ $(document).ready(function(){
     }, function() {
        $(this).find("img").removeClass( "hover" );
     });
+    
        
     //remove next prev buttons if only 1
     if (itemAmt == 1){
@@ -150,7 +150,7 @@ $(document).ready(function(){
             }
         );
     }
-        
+                
     //next and prev buttons on slider
     $('#modal-next').click(function() {
         clearInterval(autoSlide);
@@ -179,14 +179,10 @@ $(document).ready(function(){
 	
 	$('.close').click(function(){
         clearInterval(autoSlide);
-//        $('.modal-dialog').scrollTop(0);
+        $('.modal-content').scrollTop(0);
         $(".grid").css("position","relative");
         $(window).scrollTop(tempScrollTop);
-	});
-        
-    
-        
-    
+	});    
         
 })});
 
