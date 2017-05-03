@@ -58,11 +58,11 @@ $(document).ready(function(){
         itemSelector: '.grid-item',
         masonry: {
             columnWidth: 350,
-            gutter: 20,
+            gutter: 30,
             fitWidth: true
         }
     })
-      
+          
   // layout Isotope after each image loads
     $grid.imagesLoaded().progress( function() {
         $grid.isotope('layout');

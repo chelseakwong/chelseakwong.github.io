@@ -145,13 +145,6 @@
     margin:10px;
 }
 
-.copyright{
-    font-family: "Roboto Slab";
-/*    padding-left: 40px;*/
-    font-size: 12px;
-/*    padding-bottom: 30px;*/
-    color: darkgrey;
-}
 
 #subtitleAbout{
     color: black;
@@ -249,8 +242,7 @@ body {
 .grid-item {
     width: 260px;
     float:center;
-    margin: 16px;
-/*    margin-bottom: 10px;*/
+    margin-bottom: 120px;
 }
 
 .grid-item--width2{
@@ -303,6 +295,8 @@ body {
     vertical-align: middle;
     text-align: left;
     padding-top:20px;
+    letter-spacing: 5px;
+    font-style: bold;
 }
 
 .modal-body{
@@ -313,7 +307,11 @@ body {
 }
 
 .caption-link{
-    font-size: 16px;
+    font-size: 14px;
+    font-style: bold;
+    color: #515151;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .modal-body img{
@@ -400,7 +398,7 @@ body {
 /*    overflow: scroll;*/
     text-align: left;
 /*    padding-left: 30px;*/
-    padding-top:20px;
+/*    padding-top:10px;*/
     padding-bottom: 30px;
 }
 
@@ -440,7 +438,8 @@ body {
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+/*    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: 'redacted_scriptbold', Arial, serif;
 }
 
 .text-muted {
@@ -451,16 +450,6 @@ body {
     color: #fff;
     text-shadow: -2px -2px #000;
 }
-
-.trial{
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    font-size:30px;
-    color: #000;
-}
-
-
 
 p {
     font-size: 14px;
@@ -500,15 +489,16 @@ h4,
 h5,
 h6{
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 600;
+    font-style: bold;
 }
 
 .selectFilter{
     text-transform: uppercase;
     font-size: 10px;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 100;
+    font-style: bold;
+    letter-spacing: 1px;
+    font-weight: 500;
 }
 
 .selectFilter span{
@@ -519,7 +509,7 @@ h6{
 }
 
 .selected{
-    background-color: black;
+    background-color: #515151;
     color: white;
     cursor: pointer;
 }
@@ -899,8 +889,8 @@ body {
 /* TITLE LAYOUT************************* */
 
 .title{
+    text-decoration-color: #515151;
 	display:inline-block;
-    font-weight: 200;
 }
 
 #subtitle{
@@ -908,16 +898,14 @@ body {
 }
 
 #slash{
-    padding-left: 13px;
-/*    padding-right: 13px;*/
-    font-size: 15px;
+    padding-left: 10px;
 }
 
 h1.title-sub{
-    background-color: black;
+    background-color: #515151;
     color: white;
     line-height: 38px;
-    font-weight: 100;
+/*    font-weight: 100;*/
 }
 
 .containerheader{
@@ -930,4 +918,9 @@ h1.title-sub{
 
 .tooltipster-follower.tooltipster-borderless.tooltipster-borderless-customized .tooltipster-box {
 	border-radius: 0px;
+    background: #515151;
+    letter-spacing: 1px;
+    font-weight: 100;
+    text-transform: uppercase; 
+    font-size: 12px;
 }

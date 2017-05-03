@@ -16,7 +16,7 @@
 	padding: 10px 0;
 	color: #ddd;
     line-height: 25px;
-	font-size: 22px;
+	font-size: 20px;
 	font-family: 'redacted_scriptbold', Arial, serif;
     }
 .container h2{
@@ -46,23 +46,12 @@ a{
     color: #888;
 }
 
-nav .orange{
-    color: #e88873;
+nav .grey{
+    color: #515151;
 }
-nav .red{
-    color: #fd5f65;
-}
-nav .green{
-    color: #59b76f;
-}
-nav .darkblue{
-    color: #3f75aa;
-}
-nav .blue{
-    color: #65c6ea;
-}
+
 nav a:hover{
-    color: #414141;
+    color: #eeeeee;
 }
 .open{
     top: 0;
@@ -102,7 +91,7 @@ nav > ul{
     text-align: center;
 }
 nav > ul > li > a{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: bold;
     padding: 10px 0 40px 0;
     display: block;
