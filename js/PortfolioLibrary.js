@@ -12,7 +12,7 @@ library.presidentVideo = {
     video: '<iframe src="https://player.vimeo.com/video/165109329" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
     caption: "This program finds the 25 most frequently said words in a select set of presidential speeches from AmericanRhetoric.com, and compiles the results into a video with a Python script. This project was made during the election season, and the political climate inspired me to investigate past presidential speeches, juxtaposing different presidents speaking the same words.<br><br>Several different open source programs were integrated to create this sequence of clips. First, I used BeautifulSoup.py to scrape presidential speech transcripts and their videos from AmericanRhetoric.com. Then I used the Gentle Forced Aligner to process each speech, extracting the time when each word is spoken to a JSON file. The results were often accurate, but sometimes the aligner was not able to process some parts of a speech. Having transcripts, videos, and JSON files of when words are said in the transcript for each video, I then wrote a Python program that helped me find the most common words in these speeches, phrases containing these words, and sentences containing these words. I tried different ways to use the information I have but finally settled on just using the words themselves, not the containing sentence or phrase, for this project, choosing to emphasize the difference in expression rather than context. I used Movie.py to string together clips from each video in a sequence and to add scaffolding.",
     link: "https://github.com/chelseakwong/PresidentialWords",
-    linkDesc: "Github"
+    linkDesc: "Code on Github"
 }
 
 library.megakanji = {
@@ -22,7 +22,7 @@ library.megakanji = {
     video: "",
     caption: "This is a Mega Kanji generator that combines similar meaning Japanese kanjis together to form a new kanji (I termed it ‘Mega Kanji’— these aren't real, fyi.) I wanted to do this because I had to learn to write Chinese characters diligently (relevant because Japanese Kanji is a deviation from the original/ancient Chinese form), — each stroke in a character must be in order and with the appropriate distance between strokes. So, coming across the KanjiVG database motivated me to investigate the possibilities of creating new kanjis. <br><br> This program combines similar-meaning kanjis to form a new kanji. Above shows 10 different iterations. I referenced the machine-learning algorithm that @hardmaru had already written for the @NeoKanji twitter bot, and appropriated different parameters and adjustments to fit my purpose. My script trains the machine with a set of kanjis (only those that mean angry in this example), so that the machine biases heavily on the ways the strokes of 'angry' kanjis are drawn. Afterwards, the machine will sample new SVG's and, because of the way it is trained and biased, it will generate conglomerate, mega-kanjis. ",
     link: "https://github.com/chelseakwong/MegaKanji",
-    linkDesc: "Github"
+    linkDesc: "Code on Github"
 }
 
 library.tragedies = {
@@ -37,7 +37,7 @@ library.tragedies = {
     video: "",
     caption: "This project was created to visualize the colors of tragic events happening in 2015, to decontextualize the tragedies by extracting only the colors from photos taken of these events. This is an exploration to see if images from social media correlate strongly to the actual images happening— what would it look like if I juxtapose these grids of colors of disasters next to each other. Would we be able to relate events to colors with some context? I handpicked 7 events from 2015 that had a lot of media coverage so I had sufficient data points to draw accurate results: Paris Attacks, Gaza Conflict, TianJin Factory Explosions, ShenZhen Landslide, Chennai Floods, and Bento Rodrigues dam disaster. <br> <br>To achieve this, I coded an image scraper that collected images from Instagram corresponding to each event utilizing hashtags and geographical location, and a color-extractor that does the following: for each set of images from an event, calculate the top 100 colors across all images, sort them by frequency of appearance, and at last, list these colors as thumbnails in a grid.",
     link: "https://github.com/chelseakwong/InstaColorCollector",
-    linkDesc: "Github"
+    linkDesc: "Code on Github"
 }
 
 library.AudioLight = {
@@ -46,7 +46,7 @@ library.AudioLight = {
     video: "<iframe src='https://player.vimeo.com/video/153323520' width='580' height='360' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     caption: "This is an Audio Visualizer, the color dots on the wheel enlarge and blur when there is a sudden spike in volume in the audio. The color light wheel dots are all primary CYMK colors, and so when the circles overlap each other they create new colors based on which other ones they are overlapping with.",
     link: "https://github.com/chelseakwong/Audio-Visualizer",
-    linkDesc: "Github"
+    linkDesc: "Code on Github"
 }
 
 library.GenerativePolygonArt = {
@@ -126,7 +126,7 @@ function getHtmlImg(title) {
 }
 
 function getCaption(title) {
-    var caption = "<h4>" + library[title].details + "</h4>";
+    var caption = "<h4 class='details'>" + library[title].details + "</h4>";
     if (library[title].link.length != 0) {
         caption += "<a class='caption-link' href=" + "'" + library[title].link +
             "'" + ">" + "<span class='glyphicon glyphicon-link'></span> " + library[title].linkDesc + "</a>";

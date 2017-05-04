@@ -4,128 +4,25 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: white;
+	background: none;
 	z-index: 80;
-	height: 10%;
+/*	height: 10%;*/
 	overflow: visible;
     float: none;
     margin: 0 auto;
-    padding-bottom: 20px;
+/*    padding-bottom: 20px;*/
 	-webkit-transition: height 0.3s;
 	-moz-transition: height 0.3s;
 	transition: height 0.3s;
 }
 
 .cbp-af-header .cbp-af-inner {
-    height: auto;
-    padding-left: 40px;
-	padding-bottom: 10px;
+    height: 2px;
+    padding-left: 70px;
+/*	padding-bottom: 10px;*/
 }
 
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
-
-.cbp-af-header h1 {
-	text-transform: uppercase;
-    text-align: center;
-    display: inline-block;
-	color: #333;
-	letter-spacing: 3px;
-/*    padding-top: 1vw;*/
-    line-height: 50px;
-    font-size: 2vw;
-/*	margin: 0 auto;*/
-	float:none;
-}
-
-.menu-btn{
-    visibility: visible;
-    margin-top: 20px;
-}
-
-.cbp-af-header nav {
-	float: right;
-}
-
-.cbp-af-header nav a:hover {
-	color: #333;
-}
-
-/* Transitions and class for reduced height */
-.cbp-af-header h1,
-.cbp-af-header nav a {
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.cbp-af-header.cbp-af-header-shrink {
-	height: 90px;
-}
-
-.cbp-af-header.cbp-af-header-shrink h1,
-.cbp-af-header.cbp-af-header-shrink nav a {
-	line-height: 20px;
-}
-
-.cbp-af-header.cbp-af-header-shrink h1 {
-	font-size: 1em;
-}
-
-/* Example Media Queries */
-@media screen and (max-width: 55em) {
-	
-	.cbp-af-header .cbp-af-inner {
-		width: 100%;
-	}
-
-    .cbp-af-header h1{
-        font-size: 3vw;
-    }
-    
-	.cbp-af-header nav {
-		display: block;
-		margin: 0 auto;
-		text-align: left;
-		float: none;
-	}
-
-	.cbp-af-header nav a {
-		line-height: 90px;
-	}
-
-	.cbp-af-header nav a {
-		margin: 0 10px;
-	}
-
-	.cbp-af-header.cbp-af-header-shrink h1,
-	.cbp-af-header.cbp-af-header-shrink nav a {
-		line-height: 30px;
-	}
-
-	.cbp-af-header.cbp-af-header-shrink h1 {
-/*		font-size: 15px;*/
-        font-size: 3vw;
-	}
-
-	.cbp-af-header.cbp-af-header-shrink nav a {
-		font-size: 1em;
-	}
-}
-
-@media screen and (max-width: 32.25em) {
-	.cbp-af-header nav a {
-		font-size: 1em;
-	}
-}
-
-@media screen and (max-width: 24em) {
-	.cbp-af-header nav a,
-	.cbp-af-header.cbp-af-header-shrink nav a {
-		line-height: 1;
-	}
-}
-
-/* END ANIMATION HEADER*/
 
 #logoAnimation{
     width: 40%;
@@ -133,6 +30,7 @@
 }
 
 #modal-close-btn{
+    opacity: 0.8;
     background-image: url('../img_ME/cross.png');
     height: 60px;
     width: 60px;
@@ -145,6 +43,9 @@
     margin:10px;
 }
 
+#modal-close-btn:hover{
+    opacity: 0.8;
+}
 
 #subtitleAbout{
     color: black;
@@ -197,7 +98,7 @@
 html { overflow-y: scroll; }
 
 body {
-  font-family: sans-serif;
+  font-family: monospace;
 }
 
 /*#lcol {float: none;}*/
@@ -285,7 +186,7 @@ body {
 	border: none;
 }
 
-#modal-title-wrapper h3{
+#modal-title-wrapper{
     font-size: 25px;
     text-align: left;
     width: 60%;
@@ -293,17 +194,13 @@ body {
     display: inline-block;
     margin: 0 auto;
     vertical-align: middle;
-    text-align: left;
-    padding-top:20px;
-    letter-spacing: 5px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    letter-spacing: 2px;
     font-style: bold;
 }
-
-.modal-body{
-	width:100%;
-	height: auto;
-    overflow: scroll;
-	margin: 0 auto;
+.details{
+    padding-bottom: 5px;
 }
 
 .caption-link{
@@ -312,6 +209,21 @@ body {
     color: #515151;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+hr{
+    width: 10%;
+    height: 1px;
+    background-color: #515151;
+    border: none;
+    margin-left: 0;
+}
+
+.modal-body{
+	width:100%;
+	height: auto;
+    overflow: scroll;
+	margin: 0 auto;
 }
 
 .modal-body img{
@@ -439,7 +351,7 @@ body {
 body {
     overflow-x: hidden;
 /*    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;*/
-    font-family: 'redacted_scriptbold', Arial, serif;
+    font-family: 'Karla', sans-serif;
 }
 
 .text-muted {
@@ -460,18 +372,9 @@ p.large {
     font-size: 16px;
 }
 
-a,
-a:hover,
-a:focus,
-a:active,
-a.active {
-    outline: 0;
-}
-
 a {
     color: #80b4eb;
 }
-
 a:hover,
 a:focus,
 a:active,
@@ -480,16 +383,15 @@ a.active {
     color: #a99da1;
 }
 
-
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6{
+    font-family: 'Karla', sans-serif;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 400;
     font-style: bold;
 }
 
@@ -497,7 +399,7 @@ h6{
     text-transform: uppercase;
     font-size: 10px;
     font-style: bold;
-    letter-spacing: 1px;
+/*    letter-spacing: 1px;*/
     font-weight: 500;
 }
 
@@ -808,52 +710,6 @@ section h3.section-subheading {
     margin: 15px 0;
     text-transform: none;
 }
-footer {
-/*    margin: auto 0;*/
-    float: none;
-    padding: 25px 45px;
-    text-align: center;
-}
-
-footer span.copyright {
-    text-transform: uppercase;
-    text-transform: none;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 40px;
-}
-
-footer ul.quicklinks {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    text-transform: none;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 40px;
-}
-
-ul.social-buttons {
-    margin-bottom: 0;
-}
-
-ul.social-buttons li a {
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    font-size: 20px;
-    line-height: 40px;
-    outline: 0;
-    color: #fff;
-    background-color: #222;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    transition: all .3s;
-}
-
-ul.social-buttons li a:hover,
-ul.social-buttons li a:focus,
-ul.social-buttons li a:active {
-    background-color: #a99da1;
-}
 
 .btn:focus,
 .btn:active,
@@ -888,9 +744,17 @@ body {
 
 /* TITLE LAYOUT************************* */
 
-.title{
+.title, .title-sub
+{
     text-decoration-color: #515151;
 	display:inline-block;
+    letter-spacing: 3px;
+    text-align: center;
+    display: inline-block;
+	color: #333;
+	letter-spacing: 3px;
+    line-height: 20px;
+    font-size: 30px;
 }
 
 #subtitle{
@@ -901,11 +765,11 @@ body {
     padding-left: 10px;
 }
 
-h1.title-sub{
+.title-sub{
     background-color: #515151;
     color: white;
-    line-height: 38px;
-/*    font-weight: 100;*/
+    font-weight: 100;
+/*    line-height: 10px;*/
 }
 
 .containerheader{
@@ -919,7 +783,7 @@ h1.title-sub{
 .tooltipster-follower.tooltipster-borderless.tooltipster-borderless-customized .tooltipster-box {
 	border-radius: 0px;
     background: #515151;
-    letter-spacing: 1px;
+/*    letter-spacing: 1px;*/
     font-weight: 100;
     text-transform: uppercase; 
     font-size: 12px;
