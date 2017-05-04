@@ -4,22 +4,19 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background: none;
 	z-index: 80;
 /*	height: 10%;*/
 	overflow: visible;
     float: none;
     margin: 0 auto;
-/*    padding-bottom: 20px;*/
 	-webkit-transition: height 0.3s;
 	-moz-transition: height 0.3s;
 	transition: height 0.3s;
 }
 
 .cbp-af-header .cbp-af-inner {
-    height: 2px;
+    height: 1px;
     padding-left: 70px;
-/*	padding-bottom: 10px;*/
 }
 
  /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
@@ -114,20 +111,9 @@ body {
 
 
 /* ---- isotope ---- */
-
-.navbar{
-    height:190px;
-}
-
 .grid {
     background: #FFF;
-/*    max-width: 1000px;*/
     margin: 0 auto;
-/*    margin-left: 10%;*/
-/*    margin-right: 10%;*/
-/*    padding-left: 5%;*/
-/*    padding-right: 5%;*/
-/*    padding-top:35%;*/
     float: none;
 }
 
@@ -622,6 +608,10 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 
+.navbar{
+    padding-bottom: 130px;
+}
+
 header {
     text-align: center;
     color: #fff;
@@ -753,8 +743,8 @@ body {
     display: inline-block;
 	color: #333;
 	letter-spacing: 3px;
-    line-height: 20px;
-    font-size: 30px;
+    line-height: 25px;
+    font-size: 35px;
 }
 
 #subtitle{
