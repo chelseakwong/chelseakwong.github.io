@@ -15,6 +15,27 @@ function cycleItems() {
 }
 
 $(document).ready(function(){
+    // scroll to fixed of logo
+    $('.title').scrollToFixed({
+        preFixed: function(){
+            $(this).css("margin-top", "0px")
+        },
+        preUnfixed: function(){
+            $(this).css("padding-top", "40px")
+        }
+    }
+    );
+    
+    $('#worksMenu').scrollToFixed({
+        marginTop: $(".title").outerHeight(true)-70,
+        preFixed: function(){
+            $(this).css("margin-top", "0px");
+        },
+        preUnfixed: function(){
+            $(this).css("margin-top", "6rem")
+        }
+    });
+    
     //tool tip initialization
     $('.toolhover').tooltipster({
         theme: ['tooltipster-borderless', 'tooltipster-borderless-customized'],
@@ -58,8 +79,9 @@ $(document).ready(function(){
         itemSelector: '.grid-item',
         percentPosition: true,
         masonry: {
+            gutter: '.gutter-sizer',
             columnWidth: '.grid-sizer',
-            gutter: 150
+            
         }
     })
           

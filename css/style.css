@@ -1,7 +1,7 @@
 /* Header scroll animation*/
 
 .cbp-af-header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: auto;
@@ -9,35 +9,34 @@
     padding-left: 7.5rem;
     z-index: 399;
     overflow: visible;
-/*    float: none;*/
-/*    margin: 0 auto;*/
     -webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
     transition: height 0.3s;
-}
-
-.cbp-af-header .cbp-af-inner {
-    height: 1px;
-    padding-left: 40px;
 }
 
 #logo {
     background-image: url(../img_ME/websiteLogo.svg);
     background-repeat: no-repeat;
     opacity: 0.7;
-    height: 160px;
-    width: 60px;
-    background-size: 60px 174px;
+    height: 140px;
+    width: 50px;
+    background-size: 50px 164px;
     z-index: 290;
+    padding-bottom: 2rem;
 }
 
-.menuItems {
-    position: fixed;
-/*    padding-left: 40px;*/
-    margin-bottom: 0;
-    bottom: 0;
-}
 
+
+.title{
+    padding-top: 40px;
+    margin-bottom: 5rem;
+    letter-spacing: 1px;
+    color: #515151;
+}   
+
+#worksMenu{
+    margin-top: 15rem;
+}
 
 /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
 
@@ -143,7 +142,7 @@ body {
     z-index: 199;
 /*    margin: 0 auto;*/
 /*    float: none;*/
-    padding-top: 25rem;
+    padding-top: 15rem;
     padding-left: 5em;
     padding-right: 5em;
 }
@@ -156,21 +155,23 @@ body {
 
 
 /* ---- .grid-item ---- */
+
+.gutter-sizer {
+    width: 15%;
+}
+
 .grid-sizer,
 .grid-item { 
     width: 22%; 
     min-width: 200px;
-/*    float: center;*/
-    margin-bottom: 150px;
+    margin-bottom: 15rem;
 }
-.grid-item--width2 { width: 48%; }
 
 .grid-item img {
     display: block;
     max-width: 100%;
     border-style: none;
 }
-
 
 /* END OF MASONRY GRID ===============================*/
 
@@ -416,7 +417,7 @@ h6 {
 }
 
 .selectFilter span {
-    color: black;
+    color: #515151;
     cursor: pointer;
     padding: 3px;
 }
