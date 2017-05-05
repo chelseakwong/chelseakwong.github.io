@@ -29,7 +29,7 @@
 
 .title{
     font-size: 24px;
-    padding-top: 40px;
+    padding-top: 7rem;
     margin-bottom: 5rem;
     letter-spacing: 1px;
     color: #515151;
@@ -73,10 +73,6 @@
 #about p {
     font-size: 14px;
     padding-bottom: 40px;
-}
-
-#about {
-    width: 80%;
 }
 
 
@@ -141,9 +137,7 @@ body {
 .grid {
     background: none;
     z-index: 199;
-/*    margin: 0 auto;*/
-/*    float: none;*/
-    padding-top: 15rem;
+    padding-top: 20rem;
     padding-left: 5em;
     padding-right: 5em;
 }
@@ -263,6 +257,14 @@ hr {
 
 
 /* end of Portfolio modal ===============================*/
+
+
+/* ABOUT ME*/
+.aboutme{
+    margin-top: 15rem;
+    padding-left: 5em;
+    padding-right: 5em;
+}
 
 
 /*MODAL SLIDER */

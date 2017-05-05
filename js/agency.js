@@ -18,22 +18,22 @@ $(document).ready(function(){
     // scroll to fixed of logo
     $('.title').scrollToFixed({
         preFixed: function(){
-            $(this).css("margin-top", "0px")
+            $(this).css("margin-top", "0px");
         },
         preUnfixed: function(){
-            $(this).css("padding-top", "40px")
-        }
-    }
-    );
+            $(this).css("margin-bottom", "5rem")
+        },
+    });
     
     $('#worksMenu').scrollToFixed({
-        marginTop: $(".title").outerHeight(true)-70,
+        marginTop: $(".title").outerHeight(true)-60,
         preFixed: function(){
             $(this).css("margin-top", "0px");
         },
         preUnfixed: function(){
             $(this).css("margin-top", "6rem")
-        }
+        },
+        limit: $(".about").offset().top,
     });
     
     //tool tip initialization
