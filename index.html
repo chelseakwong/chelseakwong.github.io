@@ -41,10 +41,6 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!--    Nav bar scrolling-->
-<!--    <script src="js/classie.js"></script>-->
-<!--    <script src="js/headerAnimation.js"></script>-->
-
     <!-- Masonry -->
     <script src="js/masonry.pkgd.js"></script>
 
@@ -92,115 +88,96 @@
 </head>
 
 <body class="index">
+    <!--
 
-    <nav id="menu-load">
-        <!-- Navigation -->
-        <ul>
-            <li>
-                <img width=70 id="navlogo" src="img_ME/websiteLogo.svg">
-            </li>
-            <li>
-                <a href="/about.html" class="grey">ABOUT ME</a>
-            </li>
-            <li>
-                <a href="/index.html" class="grey">WORKS</a>
-            </li>
-            <li>
-                <a href="chelseakwongresume.pdf" class="grey" target="_blank">RESUME</a>
-            </li>
-            <li>
-                <a href="https://github.com/chelseakwong" class="grey" target="_blank">GITHUB</a>
-            </li>
-            <li>
-                <a href="mailto:cckwong@andrew.cmu.edu" class="grey">EMAIL</a>
-            </li>
-        </ul>
-
+    <li>
+        <a href="chelseakwongresume.pdf" class="grey" target="_blank">RESUME</a>
+    </li>
+    <li>
+        <a href="https://github.com/chelseakwong" class="grey" target="_blank">GITHUB</a>
+    </li>
+    <li>
+        <a href="mailto:cckwong@andrew.cmu.edu" class="grey">EMAIL</a>
+    </li>
     </nav>
+-->
 
 
-    <div class="menu-btn"></div>
+    <!--    <div class="menu-btn"></div>-->
     <nav class="navbar navbar-default">
         <div id="lcol" class="cbp-af-header">
-            <div class="cbp-af-inner">
-                <h1 class="title">Chelsea kwong</h1>
-<!--                <span id="slash"></span>-->
-                <br><h6 class="title-sub">works</h6>
-<!--                <br>-->
-                <div class="selectFilter">
-                    <span class="spanSel" id="All">All</span> / <span class="spanSel" id="Tech">Tech</span> / <span class="spanSel" id="Design">Design</span> </div>
+            <!--            <div class="cbp-af-inner">-->
+            <div id="logo"></div>
+            <div class="selectFilter">
+                <span class="spanSel" id="All">All</span> / <span class="spanSel" id="Tech">Tech</span> / <span class="spanSel" id="Design">Design</span>
+            </div>
+            <!--            </div>-->
+            <div class="menuItems">
+                <h3>Works</h3>
+                <h3>About</h3>
+                <h3>Contact</h3>
             </div>
         </div>
     </nav>
 
 
     <div class="container-fluid" id="main-container">
-
-        <div class="row">
-            <div class="col-md-12">
-
-
-                <div id="lcol" class="grid">
-                    <div class="grid-sizer"></div>
-                    <!-- images	-->
-                    <div class="grid-item Tech">
-                        <a href="#" description="presidentVideo" name="Most Presidential Words">
-                            <img src="img_ME/presidentScreenshot.png" class="thumbnail img-responsive toolhover" title="Most Presidential Words">
-                        </a>
-                    </div>
-
-                    <div class="grid-item Tech">
-                        <a href="#" description="megakanji" name="Mega Kanji Generator">
-                            <img src="img_ME/megakanji/sample.png" class="thumbnail img-responsive toolhover" title="Mega Kanji Generator">
-                        </a>
-                    </div>
-
-                    <div class="grid-item Design Tech">
-                        <a href="#" description="tragedies" name="Colors of Tragedies">
-                            <img src="img_ME/tragedies/ParisAttacks.png" class="thumbnail img-responsive toolhover" title="Instagram: Colors of tragedies">
-                        </a>
-                    </div>
-
-                    <div class="grid-item Design Tech">
-                        <a href="#" description="GenerativePolygonArt" name="Generative Polygon Art">
-                            <img src="img_ME/genArt/3.png" class="thumbnail img-responsive toolhover" title="Generative Polygon Art Twitter Bot">
-                        </a>
-                    </div>
-
-                    <div class="grid-item Design Tech">
-                        <a href="#" description="AudioLight" name="Audio Color Light Wheel">
-                            <img src="img_ME/audioLight.png" class="thumbnail img-responsive toolhover" title="Audio Light Wheel">
-                        </a>
-                    </div>
-
-                    <div class="grid-item Design">
-                        <a href="#" description="Prepper" name="Prepper">
-                            <img src="img_ME/Prepper/main_all.jpg" class="thumbnail img-responsive toolhover" title="Prepper Mbile App">
-                        </a>
-                    </div>
-
-                    <div class="grid-item Design">
-                        <a href="#" description="book" name="Visual Book Design for Personality Disorders">
-                            <img src="img_ME/design/book1.jpg" class="thumbnail img-responsive toolhover" title="Visual Book: Personality Disorders">
-                        </a>
-                    </div>
-
-                    <div class="grid-item Design">
-                        <a href="#" description="phonecase" name="Geometric Phone Case Design">
-                            <img src="img_ME/art/phonecase2.jpg" class="thumbnail img-responsive toolhover" title="A Pretty Graphic">
-                        </a>
-                    </div>
-
-                    <div class="grid-item Design">
-                        <a href="#" description="gotFortune" name="Got Fortune">
-                            <img src="img_ME/art/gotfortune.jpg" class="thumbnail img-responsive toolhover" title="Greeting Card Design">
-                        </a>
-                    </div>
-
-                </div>
+        <div class="grid">
+            <div class="grid-sizer"></div>
+            <!-- images	-->
+            <div class="grid-item Tech">
+                <a href="#" description="presidentVideo" name="Most Presidential Words">
+                    <img src="img_ME/presidentScreenshot.png" class="thumbnail img-responsive toolhover" title="Most Presidential Words">
+                </a>
             </div>
 
+            <div class="grid-item Tech">
+                <a href="#" description="megakanji" name="Mega Kanji Generator">
+                    <img src="img_ME/megakanji/sample.png" class="thumbnail img-responsive toolhover" title="Mega Kanji Generator">
+                </a>
+            </div>
 
+            <div class="grid-item Design Tech">
+                <a href="#" description="tragedies" name="Colors of Tragedies">
+                    <img src="img_ME/tragedies/ParisAttacks.png" class="thumbnail img-responsive toolhover" title="Instagram: Colors of tragedies">
+                </a>
+            </div>
+
+            <div class="grid-item Design Tech">
+                <a href="#" description="GenerativePolygonArt" name="Generative Polygon Art">
+                    <img src="img_ME/genArt/3.png" class="thumbnail img-responsive toolhover" title="Generative Polygon Art Twitter Bot">
+                </a>
+            </div>
+
+            <div class="grid-item Design Tech">
+                <a href="#" description="AudioLight" name="Audio Color Light Wheel">
+                    <img src="img_ME/audioLight.png" class="thumbnail img-responsive toolhover" title="Audio Light Wheel">
+                </a>
+            </div>
+
+            <div class="grid-item Design">
+                <a href="#" description="Prepper" name="Prepper">
+                    <img src="img_ME/Prepper/main_all.jpg" class="thumbnail img-responsive toolhover" title="Prepper Mbile App">
+                </a>
+            </div>
+
+            <div class="grid-item Design">
+                <a href="#" description="book" name="Visual Book Design for Personality Disorders">
+                    <img src="img_ME/design/book1.jpg" class="thumbnail img-responsive toolhover" title="Visual Book: Personality Disorders">
+                </a>
+            </div>
+
+            <div class="grid-item Design">
+                <a href="#" description="phonecase" name="Geometric Phone Case Design">
+                    <img src="img_ME/art/phonecase2.jpg" class="thumbnail img-responsive toolhover" title="A Pretty Graphic">
+                </a>
+            </div>
+
+            <div class="grid-item Design">
+                <a href="#" description="gotFortune" name="Got Fortune">
+                    <img src="img_ME/art/gotfortune.jpg" class="thumbnail img-responsive toolhover" title="Greeting Card Design">
+                </a>
+            </div>
         </div>
     </div>
 

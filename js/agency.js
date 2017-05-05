@@ -19,8 +19,8 @@ $(document).ready(function(){
     $('.toolhover').tooltipster({
         theme: ['tooltipster-borderless', 'tooltipster-borderless-customized'],
         animation: 'grow',
-        animationDuration: 250,
-        delay: 100,
+        animationDuration: 150,
+        delay: 80,
         plugins: ['follower']
     });
 
@@ -56,10 +56,10 @@ $(document).ready(function(){
     
     var $grid = $('.grid').isotope({
         itemSelector: '.grid-item',
+        percentPosition: true,
         masonry: {
-            columnWidth: 350,
-            gutter: 30,
-            fitWidth: true
+            columnWidth: '.grid-sizer',
+            gutter: 150
         }
     })
           
