@@ -26,14 +26,14 @@ $(document).ready(function(){
     });
     
     $('#worksMenu').scrollToFixed({
-        marginTop: $(".title").outerHeight(true)-60,
+        marginTop: $(".title").innerHeight(),
         preFixed: function(){
             $(this).css("margin-top", "0px");
         },
         preUnfixed: function(){
-            $(this).css("margin-top", "6rem")
+            $(this).css("margin-top", "15rem")
         },
-        limit: $(".about").offset().top,
+        limit: $(".aboutme").offset().top
     });
     
     //tool tip initialization
