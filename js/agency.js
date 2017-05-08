@@ -29,9 +29,11 @@ $(document).ready(function(){
         marginTop: $(".title").innerHeight(),
         preFixed: function(){
             $(this).css("margin-top", "0px");
+            $(this).css("padding-bottom", "13rem");
         },
         preUnfixed: function(){
-            $(this).css("margin-top", "15rem")
+            $(this).css("margin-top", "15rem");
+            $(this).css("padding-bottom", "0rem");
         },
         limit: $(".aboutme").offset().top
     });
