@@ -29,13 +29,14 @@ $(document).ready(function(){
         marginTop: $(".title").innerHeight(),
         preFixed: function(){
             $(this).css("margin-top", "0px");
-            $(this).css("padding-bottom", "13rem");
+//            $(this).css("margin-bottom", "13rem");
+            $(".grid").css("margin-top", "15rem");
         },
         preUnfixed: function(){
             $(this).css("margin-top", "15rem");
-            $(this).css("padding-bottom", "0rem");
+//            $(this).css("margin-bottom", "0rem");
+            $(".grid").css("margin-top", "0rem");
         },
-        limit: $(".aboutme").offset().top
     });
     
     //tool tip initialization

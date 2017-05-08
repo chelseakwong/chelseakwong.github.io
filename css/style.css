@@ -140,7 +140,7 @@ body {
     z-index: 199;
     padding-top: 15rem;
     padding-left: 5em;
-    padding-right: 5em;
+    margin-right: 5em;
 }
 
 .grid:after {
@@ -153,13 +153,13 @@ body {
 /* ---- .grid-item ---- */
 
 .gutter-sizer {
-    width: 15%;
+    width: 12%;
 }
 
 .grid-sizer,
 .grid-item { 
-    width: 22%; 
-    min-width: 200px;
+    width: 25%; 
+    min-width: 23rem;
     margin-bottom: 15rem;
 }
 
@@ -262,11 +262,12 @@ hr {
 
 /* ABOUT ME*/
 .aboutme{
-    margin-top: 15rem;
-    padding-left: 5em;
-    padding-right: 5em;
+/*    margin-top: 10rem;*/
+    padding-left: 7.5rem;
+    padding-right: 5rem;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
 }
-
 
 /*MODAL SLIDER */
 
@@ -415,9 +416,9 @@ h6 {
 
 .selectFilter {
     font-size: 14px;
-    color: #515151;
     text-transform: uppercase;
     font-weight: 400;
+    text-decoration-color: #515151;
 }
 
 .selectFilter span {
