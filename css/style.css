@@ -153,7 +153,7 @@ body {
 /* ---- .grid-item ---- */
 
 .gutter-sizer {
-    width: 12%;
+    width: 10%;
 }
 
 .grid-sizer,
@@ -265,8 +265,8 @@ hr {
 /*    margin-top: 10rem;*/
     padding-left: 7.5rem;
     padding-right: 5rem;
-    padding-top: 15rem;
-    padding-bottom: 15rem;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
 }
 
 /*MODAL SLIDER */
@@ -416,9 +416,9 @@ h6 {
 
 .selectFilter {
     font-size: 14px;
-    text-transform: uppercase;
+/*    text-transform: uppercase;*/
     font-weight: 400;
-    text-decoration-color: #515151;
+    color: #515151;
 }
 
 .selectFilter span {
