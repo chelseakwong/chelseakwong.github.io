@@ -6,11 +6,11 @@ var tempScrollTop = $(document.body).scrollTop();
 
 function cycleItems() {
     var item = $('#testModal div').eq(currentIndex);
-    items.fadeOut(500,"swing",function(){
+    items.fadeOut(300,"swing",function(){
         window.setTimeout(function(){
-            item.fadeIn(400,"swing");
+            item.fadeIn(200,"swing");
 //            item.css('display','inline-block');
-        },500)
+        },300)
     })
 }
 
@@ -29,12 +29,10 @@ $(document).ready(function(){
         marginTop: $(".title").innerHeight(),
         preFixed: function(){
             $(this).css("margin-top", "0px");
-//            $(this).css("margin-bottom", "13rem");
             $(".grid").css("margin-top", "15rem");
         },
         preUnfixed: function(){
             $(this).css("margin-top", "15rem");
-//            $(this).css("margin-bottom", "0rem");
             $(".grid").css("margin-top", "0rem");
         },
     });
@@ -55,29 +53,6 @@ $(document).ready(function(){
        $(this).find("img").removeClass( "hover" );
     });
     
-    $('.menu-btn').click(function(){
-        $('nav').toggleClass('open');
-        $('body').scrollTop(0);
-        $('.container-fluid').toggle();
-        var arrayNavs = document.getElementsByTagName("nav");
-        var navBar = arrayNavs[0];
-        navBar.style.zIndex = 900;
-        navBar.style.position = 'absolute';
-        
-        var menuButton = document.getElementsByClassName("menu-btn");
-        var menubtn = menuButton[0];
-        menubtn.style.position = 'relative';
-        menubtn.style.zIndex = 1000;
-        menubtn.style.position = 'fixed';
-        $(".menu-btn").css("visibility","visible")
-        $(".menu-btn").toggleClass('close-btn');
-        $('.container').toggle();        
-        //resume scroll
-        $(this).css("visibility","visible");
-        $(window).scrollTop(tempScrollTop);
-        $(".grid").css("position","relative");
-    })
-    
     var $grid = $('.grid').isotope({
         itemSelector: '.grid-item',
         percentPosition: true,
@@ -93,6 +68,7 @@ $(document).ready(function(){
         $grid.isotope('layout');
     });
 
+    // item filters init
     $('#All').addClass("selected");
     $('#All').css('color','white');
     
@@ -114,6 +90,7 @@ $(document).ready(function(){
 
 	//MODALS
 	$('.thumbnail').click(function(){
+        $("body").addClass("modal-open");
 		$('.modal-body').empty(); 
         $('.text-box').empty();
 		var title = $(this).parent('a').attr("name");
@@ -136,9 +113,9 @@ $(document).ready(function(){
 		$('#myModal').modal({show:true});
         
         //prevent scrolling of body when in modal
-        //remember previous scroll position so can reset after we close modal
-        tempScrollTop = $(document.body).scrollTop();
-        $(".grid").css("position","fixed");        
+       
+        //remember previous scroll position so can reset after we close modal 
+        
         currentIndex = 0,
 		items = $('#testModal div'),
   		itemAmt = items.length;
@@ -151,7 +128,7 @@ $(document).ready(function(){
                 }
                 cycleItems();
             }
-        }, 7500);
+        }, 2500);
         
      $( ".grid-item" ).hover(function() {
         $(this).find("img").addClass("hover");
@@ -205,8 +182,7 @@ $(document).ready(function(){
 	$('.close').click(function(){
         clearInterval(autoSlide);
         $('.modal-content').scrollTop(0);
-        $(".grid").css("position","relative");
-        $(window).scrollTop(tempScrollTop);
+        $("body").removeClass("modal-open");
 	});    
         
 })});
