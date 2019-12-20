@@ -6,11 +6,11 @@ var tempScrollTop = $(document.body).scrollTop();
 
 function cycleItems() {
     var item = $('#testModal div').eq(currentIndex);
-    items.fadeOut(300,"swing",function(){
+    items.fadeOut(800,"swing",function(){
         window.setTimeout(function(){
-            item.fadeIn(200,"swing");
+            item.fadeIn(700,"swing");
 //            item.css('display','inline-block');
-        },300)
+        },800)
     })
 }
 
@@ -128,7 +128,7 @@ $(document).ready(function(){
                 }
                 cycleItems();
             }
-        }, 2500);
+        }, 5500);
         
      $( ".grid-item" ).hover(function() {
         $(this).find("img").addClass("hover");
